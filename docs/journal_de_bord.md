@@ -66,3 +66,18 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |13|Utilisation de FontAwesome pour les icônes de la navigation|3|To do|
 |14|Utilisation de Bootstrap pour le responsive (row et col)|3|To do|
 
+### Vendredi 6 décembre 2024:
+- J'ai commencé à créer le fichier `index.html` ainsi que les fichier includes/form.html et includes/mentions.hmtl.
+- J'ai structuré toutes les pages HTML et j'ai ajouté les icônes de FontAwesome dans les fichiers pour la navigation et pour les réseaux sociaux. dans `index.html#resume`.
+- J'ai fait un commit et un  merge de ma branche `features/html_index` vers ma branche `dev`.
+- Il est possible que je réunisse les fichiers `.html` à la racine du mon dossier du projet ou de les mettre dans un dossier `/public` pour faciliter la navigation entre les pages pour la fonction Javascript.
+- J'ai également modifié mon fichier prototype en corrigeant une erreur de frappe.
+
+|ID|Name|Sprint|Status|
+|--|----|-------|-----|
+|9|Création du fichier `index.html`|3|Done|
+|10|Création du fichier `includes/form.html`|3|Done|
+|11|Création du fichier `includes/mentions.html`|3|Done|
+|12|Structure HTML des fichiers `.html`|3|Done|
+|13|Utilisation de FontAwesome pour les icônes de la navigation|3|Done|
+|14|Utilisation de Bootstrap pour le responsive (row et col)|3|To do|
