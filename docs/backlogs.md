@@ -1,10 +1,8 @@
 # **Backlog du projet**
 Ce fichier contient toutes les tâches et améliorations à réaliser pour le projet.
-Il est organisé en trois parties parties pour les tâches: tâches à réaliser, tâches en cours et tâches terminées.
-Les Sprints sont également définis dans ce fichier.
+Il est organisé en trois parties parties: tâches à réaliser, les Sprints backlogs et les UserStories.
 
 ## **Tâches à réaliser**
-
 ### **1. GitHub et gestion de projet**
  - Initialisation du projet sur GitHub.
  - Création du `README.md`.
@@ -19,7 +17,6 @@ Les Sprints sont également définis dans ce fichier.
  - Les maquettes du site doivent se trouver dans le dossier `docs/` en `.pdf` ou `.png`.
 
 ### **3. Strucuture du portefolio**
-
 ##### **Page d'accueil**
 - Présentation du portefolio.
 - *Animation* avec SCSS.
@@ -128,3 +125,28 @@ Cette mise en production se fera sur le serveur local des DWWM.
 |ID|Name|Priority|Sprint|
 |--|----|--------|-------|
 |X-last|Faire la mise en production du site|1|7|
+
+## UserStories:
+### En tant qu'utilisateur:
+#### UserStory 1:
+- En tant que **utilisateur**, je souhaite pouvoir **avoir un apperçu des projets du propriétaire du portefolio** afin de **comprendre ses compétences et réalisations**.
+#### UserStory 2:
+- En tant que **utilisateur**, je souhaite pouvoir **naviguer facilement entre les différentes sections du site** afin de **trouver facilement les informations qui m'intéressent**.
+#### UserStory 3:
+- En tant que **utilisateur**, je souhaite pouvoir **accéder aux réseaux sociaux du propriétaire du portefolio** afin d'en **savoir plus sur son parcours**.
+
+### En tant que propriétaire:
+#### UserStory 4:
+- En tant que **propriétaire**, je souhaite avoir **un formulaire de contact intégré** afin que **les visiteurs intéressés puisse me contacter**.
+#### UserStory 5:
+- En tant que **propriétaire**, je souhaite pouvoir **changer la langue du site en anglais ou en français** afin de **faciliter la communication avec les visiteurs qui ne parlent pas français**.
+#### UserStory 6:
+- En tant que **propriétaire**, je souhaite avoir **un portefolio qui correspond à mes compétences** afin que **les visiteurs puissent établir un lien avec mon profil**.
+
+### En tant que recruteur:
+#### UserStory 7:
+- En tant que **recruteur**, je souhaite pouvoir **accéder à un CV électronique** afin de **connaitre le profil du propriétaire du portefolio**.
+#### UserStory 8:
+- En tant que **recruteur**, je souhaite savoir **quels languages et frameworks ont été utilisés** afin de **connaitre les compétences du propriétaire du portefolio**.
+#### UserStory 9:
+- En tant que **recruteur**, je souhaite avoir **une description des projets réalisés** afin de **comprendre leur fonctionnalité**.
