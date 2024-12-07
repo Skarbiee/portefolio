@@ -73,6 +73,9 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 - Il est possible que je réunisse les fichiers `.html` à la racine du mon dossier du projet ou de les mettre dans un dossier `/public` pour faciliter la navigation entre les pages pour la fonction Javascript.
 - J'ai également modifié mon fichier prototype en corrigeant une erreur de frappe.
 
+### Samedi 7 décembre 2024:
+- Je me suis rendue compte qu'il était préférable que j'utilise Bootstrap au moment du responsive. Je ferai donc cette tâche au moment du SCSS. j'ai donc ajouté la tâche en grâs pour me souvenir qu'il faut que je la fasse au moment du SCSS.
+
 |ID|Name|Sprint|Status|
 |--|----|-------|-----|
 |9|Création du fichier `index.html`|3|Done|
@@ -80,4 +83,16 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |11|Création du fichier `includes/mentions.html`|3|Done|
 |12|Structure HTML des fichiers `.html`|3|Done|
 |13|Utilisation de FontAwesome pour les icônes de la navigation|3|Done|
-|14|Utilisation de Bootstrap pour le responsive (row et col)|3|To do|
+|**14**|**Utilisation de Bootstrap pour le responsive (row et col)**|**3**|**To do**|
+
+## Sprint 4:
+
+|ID|Name|Sprint|Status|
+|--|----|-------|-----|
+|15|Création du `js/main.js`|4|To do|
+|16|Fonction de vérificaiton du champ email|4|To do|
+|17|Fonction vérification des champs nom, prénom et message non vides|4|To do|
+|18|Fonction du champ nom maximum 50 caractères et prénom maximum 20 caractères|4|To do|
+|19|Fonction message de confirmation ou d'erreur pour le formulaire|4|To do|
+|20|Ajout de chaque fonction du fichier `js/main.js` en pseudo-code dans `docs/pseudo-code.md`|4|To do|
+|21|Utiliser Vue.js pour les futures animations avec SCSS|4|To do|
