@@ -76,13 +76,11 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
     if (margein === 4){
         document.getElementById('contact').style.marginBottom = '5em';
-    }
-    if (margein === 3){
+    } else if (margein === 3){
         document.getElementById('contact').style.marginBottom = '6.5em';
-    }
-    if (margein === 2){
+    } else if (margein === 2){
         document.getElementById('contact').style.marginBottom = '8em';
-    }if (margein === 1){
+    } else if (margein === 1){
         document.getElementById('contact').style.marginBottom = '9.5em';
     }
 
