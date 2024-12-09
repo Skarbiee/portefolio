@@ -115,9 +115,9 @@ Cette mise en production se fera sur le serveur local des DWWM.
 |26|Faire le responsive du site|1|5|
 |27|Ajouter les animations SCSS|4|5|
 
-Update : 07/12/24
-Ajout de la tâche ID 14 du `sprint 3` dans le `sprint 5`.
-`Utilisation de Bootstrap pour le responsive (row et col)`
+Update : 07/12/24 :
+- Ajout de la tâche ID 14 du `Sprint 3` dans le `Sprint 5`.
+- `Utilisation de Bootstrap pour le responsive (row et col)`.
 
 
 ### Sprint 6:
@@ -125,6 +125,10 @@ Ajout de la tâche ID 14 du `sprint 3` dans le `sprint 5`.
 |--|----|--------|-------|
 |28|Ajouter les tâches qui ont posé problème dans les sprints précédents|2|6|
 |X|Vérifier les commentaires dans les codes|1|6|
+
+Update : 08/12/24 :
+- Ajout de la tâche ID 21 du `Sprint 4` dans le `Sprint 6`.
+- `Utiliser Vue.js pour les futures animations avec SCSS`.
 
 ### Sprint 7:
 |ID|Name|Priority|Sprint|

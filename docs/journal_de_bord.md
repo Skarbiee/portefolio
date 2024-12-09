@@ -74,7 +74,8 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 - J'ai également modifié mon fichier prototype en corrigeant une erreur de frappe.
 
 ### Samedi 7 décembre 2024:
-- Je me suis rendue compte qu'il était préférable que j'utilise Bootstrap au moment du responsive. Je ferai donc cette tâche au moment du SCSS. j'ai donc ajouté la tâche en grâs pour me souvenir qu'il faut que je la fasse au moment du SCSS.
+- Je me suis rendue compte qu'il était préférable que j'utilise Bootstrap au moment du responsive. Je ferai donc cette tâche au moment du SCSS. j'ai donc ajouté la tâche en grâs pour me souvenir qu'il faut que je la fasse au moment du SCSS. 
+- Je vais maintenant passer au Sprint 4.
 
 |ID|Name|Sprint|Status|
 |--|----|-------|-----|
@@ -96,3 +97,32 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |19|Fonction message de confirmation ou d'erreur pour le formulaire|4|To do|
 |20|Ajout de chaque fonction du fichier `js/main.js` en pseudo-code dans `docs/pseudo-code.md`|4|To do|
 |21|Utiliser Vue.js pour les futures animations avec SCSS|4|To do|
+
+### Dimanche 8 décembre 2024:
+- Je viens de finir le Javascript pour la fonction de vérification du formulaire de la page `form.html`.
+- J'ai également ajouté une fonction qui me permet d'ajouter du innerHTML pour que ça soit plus optimisé.
+- J'ai commenté le code et j'ai ajouté le pseudo-code des deux fonctions dans le fichier `docs/pseudo-code.md`.
+- J'ai mis la tâche du Vue.js pour les future animations avec le SCSS à plus tard vu que c'est de l'optionnel. Avec le Vue je voulais changer la langue, passer du français à l'anglais avec un ou deux boutons. Au vu du temps qu'il me reste, je n epense pas que ça soit la priorité.
+- Je peux maintenant entamer le Sprint 5.
+
+|ID|Name|Sprint|Status|
+|--|----|-------|-----|
+|15|Création du `js/main.js`|4|Done|
+|16|Fonction de vérificaiton du champ email|4|Done|
+|17|Fonction vérification des champs nom, prénom et message non vides|4|Done|
+|18|Fonction du champ nom maximum 50 caractères et prénom maximum 20 caractères|4|Done|
+|19|Fonction message de confirmation ou d'erreur pour le formulaire|4|Done|
+|20|Ajout de chaque fonction du fichier `js/main.js` en pseudo-code dans `docs/pseudo-code.md`|4|Done|
+|**21**|**Utiliser Vue.js pour les futures animations avec SCSS**|**4**|**To do**|
+
+## Sprint 5
+
+|ID|Name|Sprint|Status|
+|--|----|-------|-----|
+|22|Création du fichier `style.scss` et des fonctions, mixins, variables, etc.|5|To do|
+|23|Faire le design du fichier `index.html`|5|To do|
+|24|Faire le design du fichier `includes/form.html`|5|To do|
+|25|Faire le design du fichier `includes/mentions.html`|5|To do|
+|26|Faire le responsive du site|5|To do|
+|27|Ajouter les animations SCSS|5|To do|
+|**14**|**Utilisation de Bootstrap pour le responsive (row et col)**|**3**|**To do**|
