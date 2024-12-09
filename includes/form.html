@@ -50,24 +50,39 @@
     </header>
     <main>
         <section id="contact">
-            <h2>Besoin de me contacter ?</h2>
+            <h2>Envie de me contacter ?</h2>
             <span>champ obligatoire *</span>
-            <form>
-                <label for="lastname">Nom</label>
-                <input type="text" id="lastname" name="lastname" required>
-                <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" name="firstname" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email"required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+            <form id="contactForm">
+                <div>
+                    <label for="lastname">Nom</label>
+                    <input type="text" id="lastname" name="lastname">
+                    <div id="nameError"></div>
+                </div>
+                <div>
+                    <label for="firstname">Prénom</label>
+                    <input type="text" id="firstname" name="firstname">
+                    <div id="firstNameError"></div>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                    <div id="emailError"></div>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                    <div id="messageError"></div>
+                </div>
+                <div id="emptyError"></div>
                 <button type="submit">Envoyer</button>
             </form>
+            <div id="feedback"></div>
         </section>
     </main>
     <footer>
         <span>&copy; Copyright 2024 Eva Garrigues</span>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
