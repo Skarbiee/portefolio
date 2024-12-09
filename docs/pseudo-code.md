@@ -18,57 +18,69 @@ Fin
 Définir l'événement `submit` sur le formulaire avec l'id `contactForm` :
 - Bloquer par défaut le comportement de l'événement `submit`(e.preventDefalt())
 
-- Récupérer les éléments HTML pour afficher les erreurs et le message de validation:
+### Récupérer les éléments HTML pour afficher les erreurs et le message de validation:
   - `NameError`,
   - `FirstNameError`,
   - `EmailError`,
   - `EmptyInput`,
   - `Feedback`
 
-- Récupérer les valeurs saisies dans les champs de formulaire:
+### Récupérer les valeurs saisies dans les champs de formulaire:
   - `Name`: valeur du champ "name" sans espace inutiles
   - `FirstName`: valeur du champ "firstName" sans espace inutiles
   - `Email`: valeur du champ "email" sans espace inutiles
   - `Message`: valeur du champ "message" sans espace inutiles
 
 - Initialiser la variable booléenne `isValid` à vrai (`true`) indiquant que le formulaire est valide.
+- Initialiser la variable `margein` à 0 permettant de définir la marge en fonction des messages d'erreur et de validation.
 
-- Effacer les messages d'erreurs et de validation précédents:
+### Effacer les messages d'erreurs et de validation précédents:
   - Réinitialiser les contenus HTML des éléments `NameError`, `FirstNameError`, `EmailError`, `EmptyInput` et `Feedback` à une chaîne de caractères vide.
 
-- Vérifier les champs du formulaire:
+### Vérifier les champs du formulaire:
 
-  - Vérifier le champ `name`:
-    - Si le champ "name" contient des caractères invalides:
+  #### Vérifier le champ `name`:
+  - Si le champ "name" contient des caractères invalides:
+    - Mettre `isValid` à faux (`false`)
+    - Afficher le message d'erreur dans `NameError` avec la fonction `promptHTML`
+  -Sinon Si le champ "name" contient plus de 50 caractères:
       - Mettre `isValid` à faux (`false`)
       - Afficher le message d'erreur dans `NameError` avec la fonction `promptHTML`
-    - Si le champ "name" contient plus de 50 caractères:
-      - Mettre `isValid` à faux (`false`)
-      - Afficher le message d'erreur dans `NameError` avec la fonction `promptHTML`
 
-  - Vérifier le champ `firstName`:
-    - Si le champ "firstName" contient des caractères invalides:
-      - Mettre `isValid` à faux (`false`)
-      - Afficher le message d'erreur dans `FirstNameError` avec la fonction `promptHTML`
-    - Si le champ "firstName" contient plus de 20 caractères:
+  #### Vérifier le champ `firstName`:
+  - Si le champ "firstName" contient des caractères invalides:
+    - Mettre `isValid` à faux (`false`)
+    - Afficher le message d'erreur dans `FirstNameError` avec la fonction `promptHTML`
+  - Sinon Si le champ "firstName" contient plus de 20 caractères:
       - Mettre `isValid` à faux (`false`)
       - Afficher le message d'erreur dans `FirstNameError` avec la fonction `promptHTML`
 
-  - Vérifier le champ `email`:
-    - Si le champ "email" est vide:
-      - Mettre `isValid` à faux (`false`)
-      - Afficher le message d'erreur dans `EmailError` avec la fonction `promptHTML`
-    - Si le champ "email" n'a pas un format valide:
+  #### Vérifier le champ `email`:
+  - Si le champ "email" est vide:
+    - Mettre `isValid` à faux (`false`)
+    - Afficher le message d'erreur dans `EmailError` avec la fonction `promptHTML`
+  - Sinon Si le champ "email" n'a pas un format valide:
       - Mettre `isValid` à faux (`false`)
       - Afficher le message d'erreur dans `EmailError` avec la fonction `promptHTML`
 
-  - Vérifier les champs obligatoires:
+  #### Vérifier les champs obligatoires:
     - Si le champ "Name", "firstName" ou "Message" est vide:
     - Mettre `isValid` à faux (`false`)
     - Afficher le message d'erreur dans `EmptyInput` avec la fonction `promptHTML`
 
-  - Si `isValid` est vrai (`true`) (si aucune erreur n'apparait):
+  #### Si tous les champs sont valides:
+  - Si `isValid` est vrai (`true`):
     - Afficher le message de validation dans `Feedback` avec la fonction `promptHTML`
     - Réinitialiser le formulaire avec la méthode reset()
+
+  #### En fonction du nombre d'erreurs, définir la marge par rapport a la valeur de margein:
+  - Si margein est égal à 4:
+    le style de la  section id `contact` pour le `margin-bottom` est égal à `5em`
+  - Sinon Si margein est égal à 3:
+      le style de la  section id `contact` pour le `margin-bottom` est égal à `6.5em`
+    - Sinon Si margein est égal à 2:
+        le style de la  section id `contact` pour le `margin-bottom` est égal à `8em`
+      - Sinon Si margein est égal à 1:
+          le style de la  section id `contact` pour le `margin-bottom` est égal à `9.5em`
 
 Fin

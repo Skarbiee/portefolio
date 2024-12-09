@@ -126,3 +126,15 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |26|Faire le responsive du site|5|To do|
 |27|Ajouter les animations SCSS|5|To do|
 |**14**|**Utilisation de Bootstrap pour le responsive (row et col)**|**3**|**To do**|
+
+### Lundi 9 décembre 2024:
+- J'ai fait le design des pages. J'ai utilisé Bootstrap, fait des animations en SCSS. Il faut que je fasse le responsive du site maintenant.
+|ID|Name|Sprint|Status|
+|--|----|-------|-----|
+|22|Création du fichier `style.scss` et des fonctions, mixins, variables, etc.|5|Done|
+|23|Faire le design du fichier `index.html`|5|Done|
+|24|Faire le design du fichier `includes/form.html`|5|Done|
+|25|Faire le design du fichier `includes/mentions.html`|5|Done|
+|26|Faire le responsive du site|5|To do|
+|27|Ajouter les animations SCSS|5|Done|
+|**14**|**Utilisation de Bootstrap pour le responsive (row et col)**|**3**|**Done**|
