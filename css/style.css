@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "DOF";
+  src: url(../fonts/DaughterOfFortune.ttf);
+}
+@font-face {
+  font-family: "PragNarrow";
+  src: url(../css/frameworks/webfonts/PragatiNarrow-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../css/frameworks/webfonts/Inter_24pt-Regular.ttf);
+}
+body > header > div button, body main > #home h2, body main > #home > article p, body main h2, body main #resume > div > div p, body main #resume > div > div > div > span, body main #resume aside p, body main #resume aside p a, body main #contact > div, body main #mentions article h3, body main #mentions article p, body footer {
+  color: #404D7A;
+  font-family: "Inter";
+}
+
+body {
+  background-color: #B6A3A3;
+  width: 70%;
+  margin: 0 auto;
+}
+body > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body > header ul {
+  margin-top: 1em;
+  display: flex;
+  list-style: none;
+}
+body > header ul li {
+  display: flex;
+  margin-right: 2.5em;
+}
+body > header ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+body > header ul li a i {
+  color: #FCD1FC;
+  font-size: 3.5em;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+body > header ul li a .active {
+  color: #4671FF;
+}
+body > header ul li a span {
+  color: #4671FF;
+  font-family: "PragNarrow";
+  transition: 500ms;
+  opacity: 0;
+}
+body > header ul li a i:hover {
+  color: #4671FF;
+  transform: translateY(-10px);
+}
+body > header ul li a i:hover + span {
+  opacity: 1;
+}
+body > header > div {
+  margin-right: 3em;
+  display: flex;
+  align-items: center;
+}
+body > header > div button {
+  font-size: 1.25em;
+  background-color: #B6A3A3;
+  border: none;
+  cursor: pointer;
+}
+body main {
+  margin: 0;
+}
+body main > #home {
+  margin: 13em auto 15.4em auto;
+  display: flex;
+  width: 90%;
+}
+body main > #home h2 {
+  font-size: 4em;
+}
+body main > #home > article {
+  display: flex;
+  flex-direction: column;
+}
+body main > #home > article > header {
+  display: flex;
+  margin-bottom: 3em;
+}
+body main > #home > article > header > img {
+  margin: 0 auto;
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+}
+body main > #home > article p {
+  font-size: 2em;
+}
+body main h2 {
+  font-size: 3em;
+}
+body main #projects {
+  margin: 0 0 4.7em 0;
+  display: none;
+}
+body main #projects > div {
+  margin: 0.4em 0;
+  justify-content: space-around;
+}
+body main #projects > div article {
+  width: 19em;
+}
+body main #projects > div article div {
+  margin: 0 auto;
+  text-align: center;
+}
+body main #projects > div article div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 14em;
+  width: 14em;
+}
+body main #resume {
+  margin-bottom: 2.15em;
+  display: none;
+}
+body main #resume > div {
+  display: flex;
+  justify-content: space-between;
+}
+body main #resume > div > div {
+  width: 50%;
+}
+body main #resume > div > div p {
+  font-size: 2em;
+  margin: 1em 0 0 0;
+}
+body main #resume > div > div > div {
+  margin-top: 3em;
+}
+body main #resume > div > div > div > span {
+  font-size: 2em;
+}
+body main #resume > div > div > div > ul {
+  margin-top: 2em;
+  display: flex;
+  list-style: none;
+}
+body main #resume > div > div > div > ul > li {
+  display: flex;
+  list-style: none;
+  margin-right: 2.5em;
+}
+body main #resume > div > div > div > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+body main #resume > div > div > div > ul > li > a > i {
+  color: black;
+  font-size: 4em;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+body main #resume > div > div > div > ul > li > a > span {
+  color: black;
+  font-family: "PragNarrow";
+  font-size: 1.25em;
+  transition: 500ms;
+  opacity: 0;
+}
+body main #resume > div > div > div > ul > li > a > i:hover {
+  transform: translateY(-15px);
+}
+body main #resume > div > div > div > ul > li > a > i:hover + span {
+  opacity: 1;
+}
+body main #resume aside {
+  margin-left: 1em;
+  width: 45%;
+}
+body main #resume aside img {
+  width: 30.5em;
+}
+body main #resume aside p {
+  font-size: 2em;
+}
+body main #resume aside p a {
+  text-decoration: none;
+  cursor: default;
+}
+body main #resume aside p a i {
+  cursor: pointer;
+}
+body main #resume aside p a > i:hover {
+  animation: yippie 800ms infinite;
+}
+@keyframes yippie {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+body main #contact {
+  margin-bottom: 11em;
+}
+body main #contact > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0 0 0;
+}
+body main #contact > div #contactForm {
+  width: 40%;
+  margin: 0 auto;
+  padding: 4em 0;
+}
+body main #contact > div #contactForm label {
+  margin-bottom: 0.5em;
+}
+body main #contact > div #contactForm input {
+  margin: 0 auto 1em auto;
+  padding: 0.5em;
+  border-radius: 8px;
+  border: #7D7983 2px solid;
+}
+body main #contact > div #contactForm textarea {
+  margin: 0 auto 1em auto;
+  padding: 0.5em;
+  border-radius: 8px;
+  border: #7D7983 2px solid;
+}
+body main #contact > div #contactForm > #btn-submit {
+  justify-content: center;
+}
+body main #contact > div #contactForm > #btn-submit > button {
+  margin: 0.5em 0;
+  padding: 0.25em;
+  border-radius: 8px;
+  border: #7D7983 2px solid;
+}
+body main #mentions {
+  margin-bottom: 6em;
+}
+body main #mentions article {
+  width: 90%;
+  margin: 0.5em auto;
+}
+body main #mentions article h3 {
+  font-size: 2.25em;
+  margin-bottom: 0.5em;
+}
+body main #mentions article p {
+  font-size: 2em;
+}
+body main #mentions > h2 {
+  margin: 0 0 0.5em 0;
+}
+body footer {
+  margin-top: auto;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
