@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "_colors"      as c;
+@use "_typo"        as t;
+
+
+%text-main{
+    color: map.get(c.$project, 'text');
+    font-family: 'Inter';
+}

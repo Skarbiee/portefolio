@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "DOF";
+    src: url(../fonts/DaughterOfFortune.ttf);
+}
+
+$title-font: "DOF";
+
+@font-face{
+    font-family: 'PragNarrow';
+    src: url(../css/frameworks/webfonts/PragatiNarrow-Regular.ttf)
+}
+
+$icon-font: 'PragNarrow';
+
+@font-face{
+    font-family: 'Inter';
+    src: url(../css/frameworks/webfonts/Inter_24pt-Regular.ttf);
+}
+
+$text-font: 'Inter';

@@ -1,0 +1,392 @@
+@use "sass:map";
+@use "_variables" as v;
+@use "_colors" as c;
+@use "_typo" as t;
+@use "_mixins" as m;
+@use "_extends" as e;
+
+body {
+    background-color: map.get(c.$project, 'bg');
+    width: 70%;
+    margin: 0 auto;
+
+    >header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            margin-top: 1em;
+            display: flex;
+            list-style: none;
+
+            li {
+                display: flex;
+                margin-right: 2.5em;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+
+                    i {
+                        color: map.get(c.$project, 'light');
+                        font-size: 3.5em;
+                        cursor: pointer;
+                        transition: transform 300ms;
+
+                    }
+
+                    .active {
+                        color: map.get(c.$project, 'active');
+                    }
+
+                    span {
+                        color: map.get(c.$project, 'active');
+                        font-family: t.$icon-font;
+                        transition: 500ms;
+                        opacity: 0;
+                    }
+
+
+                    i:hover {
+                        color: map.get(c.$project, 'active');
+                        transform: translateY(-10px);
+                    }
+
+                    i:hover+span {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        >div {
+            margin-right: 3em;
+            display: flex;
+            align-items: center;
+
+            button {
+                font-size: 1.25em;
+                @extend %text-main;
+                background-color: map.get(c.$project, 'bg');
+                border: none;
+                cursor: pointer
+            }
+        }
+    }
+
+
+    main {
+        margin: 0;;
+
+        >#home {
+            margin: 13em auto 15.4em auto;
+            display: flex;
+            width: 90%;
+            // display: none;
+
+            h2 {
+                @extend %text-main;
+                font-size: 4em;
+            }
+
+            >article {
+                display: flex;
+                flex-direction: column;
+
+                >header {
+                    display: flex;
+                    margin-bottom: 3em;
+
+                    >img {
+                        margin: 0 auto;
+                        width: 15em;
+                        height: 15em;
+                        border-radius: 50%;
+                    }
+                }
+
+                p {
+                    @extend %text-main;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        h2 {
+            @extend %text-main;
+            font-size: 3em;
+        }
+
+        #projects {
+            margin: 0 0 4.7em 0;
+            display: none;
+
+            >div {
+                margin: 0.4em 0;
+                justify-content: space-around;
+
+                article {
+                    width: 19em;
+
+                    div {
+                        margin: 0 auto;
+                        text-align: center;
+
+                        img {
+                            object-fit: cover;
+                            height: 14em;
+                            width: 14em;
+                        }
+                    }
+                }
+            }
+        }
+
+        #resume {
+            margin-bottom: 2.15em;
+            display:none;
+            >div {
+                display: flex;
+                justify-content: space-between;
+
+                >div {
+                    width: 50%;
+
+                    p {
+                        @extend %text-main;
+                        font-size: 2em;
+                        margin: 1em 0 0 0;
+                    }
+
+                    >div {
+                        margin-top: 3em;
+
+                        >span {
+                            @extend %text-main;
+                            font-size: 2em;
+                        }
+
+                        >ul {
+                            margin-top: 2em;
+                            display: flex;
+                            list-style: none;
+
+                            >li {
+                                display: flex;
+                                list-style: none;
+                                margin-right: 2.5em;
+
+                                >a {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-decoration: none;
+
+                                    >i {
+                                        color: map.get(c.$code, 'text');
+                                        font-size: 4em;
+                                        cursor: pointer;
+                                        transition: transform 300ms;
+                                    }
+
+                                    >span {
+                                        color: map.get(c.$code, 'text');
+                                        font-family: t.$icon-font;
+                                        font-size: 1.25em;
+                                        transition: 500ms;
+                                        opacity: 0;
+                                    }
+
+                                    >i:hover {
+                                        transform: translateY(-15px);
+                                    }
+
+                                    >i:hover+span {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            aside {
+                margin-left: 1em;
+                width: 45%;
+
+                img {
+                    width: 30.5em;
+                }
+
+                p {
+                    @extend %text-main;
+                    font-size: 2em;
+
+                    a {
+                        text-decoration: none;
+                        @extend %text-main;
+                        cursor: default;
+
+                        i {
+                            cursor: pointer;
+                        }
+
+                        >i:hover {
+                            animation: yippie 800ms infinite;
+                        }
+
+                        @keyframes yippie {
+                            0% {
+                                transform: translateX(0px);
+                            }
+
+                            50% {
+                                transform: translateX(10px)
+                            }
+
+                            100% {
+                                transform: translateX(0px);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #contact {
+            margin-bottom: 11em ;
+            >div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1em 0 0 0;
+                @extend %text-main;
+
+                #contactForm {
+                    width: 40%;
+                    margin: 0 auto;
+                    padding: 4em 0;
+
+                    label {
+                        margin-bottom: 0.5em;
+                    }
+
+                    input {
+                        margin: 0 auto 1em auto;
+                        padding: 0.5em;
+                        border-radius: 8px;
+                        border: #7D7983 2px solid;
+                    }
+
+                    textarea {
+                        margin: 0 auto 1em auto;
+                        padding: 0.5em;
+                        border-radius: 8px;
+                        border: #7D7983 2px solid;
+                    }
+
+                    >#btn-submit {
+                        justify-content: center;
+
+                        >button {
+                            margin: 0.5em 0;
+                            padding: 0.25em;
+                            border-radius: 8px;
+                            border: #7D7983 2px solid;
+                        }
+                    }
+                }
+            }
+        }
+
+        #mentions {
+            margin-bottom: 6em;
+            article {
+                width: 90%;
+                margin: 0.5em auto;
+                h3 {
+                    @extend %text-main;
+                    font-size: 2.25em;
+                    margin-bottom: 0.5em
+                }
+                p {
+                    @extend %text-main;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        #mentions>h2 {
+            margin: 0 0 0.5em 0;
+        }
+    }
+
+    footer {
+        margin-top:auto;
+        @extend %text-main;
+        text-align: center;
+    }
+
+}
+
+// @media screen and (max-width: 1020px) {
+//     body {
+//         background-color: map.get(c.$project, 'bg');
+//         width: 90%;
+//         margin: 0 auto;
+
+//         >header {
+//             margin-top: 1em;
+//             display: flex;
+//             justify-content: space-between;
+
+//             >div {
+//                 button {
+//                     font-size: 1em;
+//                 }
+
+//             }
+//         }
+//     }
+// }
+
+
+// @media screen and (max-width: 960px) {
+//     body {
+//         >header {
+//             >button {
+//                 font-size: 0.7em;
+//             }
+//         }
+
+//         width:90%;
+
+//         #home {
+//             >header {
+//                 >div {
+//                     order: 2;
+//                 }
+
+//                 img {
+//                     order: 1;
+//                 }
+//             }
+
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 600px) {
+//     body {
+//         width: 100%;
+//     }
+
+//     h2 {
+//         font-size: 3em;
+//     }
+// }

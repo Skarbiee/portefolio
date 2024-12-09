@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c5ea563261.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+    <link rel="stylesheet" href="../css/frameworks/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/frameworks/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="../css/zoning.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
     <title>Eva Garrigues</title>
 </head>
 
@@ -32,7 +36,7 @@
                 </li>
                 <li>
                     <a href="form.html">
-                        <i class="fa-solid fa-inbox">&#8205;</i>
+                        <i class="fa-solid fa-inbox active">&#8205;</i>
                         <span class="name-icon">CONTACT</span>
                     </a>
                 </li>
@@ -49,34 +53,39 @@
         </div>
     </header>
     <main>
-        <section id="contact">
+        <section id="contact" class="marge-all">
             <h2>Besoin de me contacter ?</h2>
-            <span>champs obligatoires *</span>
-            <form id="contactForm">
-                <div>
-                    <label for="lastname">Nom</label>
-                    <input type="text" id="lastname" name="lastname">
-                    <div id="nameError"></div>
-                </div>
-                <div>
-                    <label for="firstname">Prénom</label>
-                    <input type="text" id="firstname" name="firstname">
-                    <div id="firstNameError"></div>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email">
-                    <div id="emailError"></div>
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
-                    <div id="messageError"></div>
-                </div>
-                <div id="emptyError"></div>
-                <button type="submit">Envoyer</button>
-            </form>
-            <div id="feedback"></div>
+            <div>
+                <span>champs obligatoires *</span>
+                <form id="contactForm" class="container-fluid">
+                    <div class="row">
+                        <label class="col-12" for="lastname">Nom *</label>
+                        <input class="col-12" type="text" id="lastname" name="lastname">
+                        <div class="col-12" id="nameError"></div>
+                    </div>
+                    <div class="row">
+                        <label class="col-12" for="firstname">Prénom *</label>
+                        <input class="col-12" type="text" id="firstname" name="firstname">
+                        <div class="col-12" id="firstNameError"></div>
+                    </div>
+                    <div class="row">
+                        <label class="col-12" for="email">Email *</label>
+                        <input class="col-12" type="text" id="email" name="email">
+                        <div class="col-12" id="emailError"></div>
+                    </div>
+                    <div class="row">
+                        <label class="col-12" for="message">Message *</label>
+                        <textarea class="col-12" id="message" name="message"></textarea>
+                        <div class="col-12" id="messageError"></div>
+                    </div>
+                    <div id="emptyError"></div>
+                    <div class="row" id="btn-submit">
+                        <button class="col-3" type="submit">Envoyer</button>
+                    </div>
+                    
+                </form>
+                <div id="feedback"></div>
+            </div>
         </section>
     </main>
     <footer>
