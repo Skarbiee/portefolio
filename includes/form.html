@@ -18,84 +18,84 @@
             <ul>
                 <li>
                     <a href="../index.html#home">
-                        <i class="fa-solid fa-house">&#8205;</i>
+                        <i class="fa-solid fa-house" role="button" aria-label="allers vers la page d'accueil">&#8205;</i>
                         <span class="name-icon">HOME</span>
                     </a>
                 </li>
                 <li>
                     <a href="../index.html#projects">
-                        <i class="fa-solid fa-desktop">&#8205;</i>
+                        <i class="fa-solid fa-desktop" role="button" aria-label="allers vers la page ddes projets">&#8205;</i>
                         <span class="name-icon">PROJECTS</span>
                     </a>
                 </li>
                 <li>
                     <a href="../index.html#resume">
-                        <i class="fa-solid fa-file-lines">&#8205;</i>
+                        <i class="fa-solid fa-file-lines" role="button" aria-label="aller vers la page de CV">&#8205;</i>
                         <span class="name-icon">RESUME</span>
                     </a>
                 </li>
                 <li>
                     <a href="form.html">
-                        <i class="fa-solid fa-inbox active">&#8205;</i>
+                        <i class="fa-solid fa-inbox active" role="button" aria-label="aller vers la page de contact">&#8205;</i>
                         <span class="name-icon">CONTACT</span>
                     </a>
                 </li>
                 <li>
                     <a href="mentions.html">
-                        <i class="fa-solid fa-scale-balanced">&#8205;</i>
+                        <i class="fa-solid fa-scale-balanced" role="button" aria-label="aller vers la page des mentions légales" >&#8205;</i>
                         <span class="name-icon">MENTIONS</span>
                     </a>
                 </li>
             </ul>
         </nav>
         <div id="btns-lang">
-            <button type="button">FR | EN</button>
+            <button type="button" role="button" aria-label="bouton français ou anglais ?">FR | EN</button>
         </div>
     </header>
     <main>
         <section id="contact" class="marge-all">
-            <h2>Besoin de me contacter ?</h2>
+            <h2 aria-label="Besoin de me contacter ?">Besoin de me contacter ?</h2>
             <div>
                 <span>champs obligatoires *</span>
-                <form id="contactForm" class="container-fluid">
+                <form id="contactForm" class="container-fluid" aria-label="formulaire de contact">
                     <div class="row">
-                        <label class="col-12" for="lastname">Nom *</label>
-                        <input class="col-12" type="text" id="lastname" name="lastname">
-                        <div class="col-12" id="nameError"></div>
+                        <label class="col-12" for="lastname" aria-label="nom">Nom *</label>
+                        <input class="col-12" type="text" id="lastname" name="lastname" placeholder="entrez votre nom" aria-label="maximum 50 caractères" >
+                        <div class="col-12" id="nameError" aria-label="message d'erreur de validité du nom"></div>
                     </div>
                     <div class="row">
-                        <label class="col-12" for="firstname">Prénom *</label>
-                        <input class="col-12" type="text" id="firstname" name="firstname">
-                        <div class="col-12" id="firstNameError"></div>
+                        <label class="col-12" for="firstname" aria-label="prénom">Prénom *</label>
+                        <input class="col-12" type="text" id="firstname" name="firstname" placeholder="entrez votre prénom" aria-label="maximum 20 caractères" >
+                        <div class="col-12" id="firstNameError" aria-label="message d'erreur de validité du prénom"></div>
                     </div>
                     <div class="row">
-                        <label class="col-12" for="email">Email *</label>
-                        <input class="col-12" type="text" id="email" name="email">
-                        <div class="col-12" id="emailError"></div>
+                        <label class="col-12" for="email" aria-label="email">Email *</label>
+                        <input class="col-12" type="text" id="email" name="email" aria-label="entrez votre email" placeholder="email@exemple.com">
+                        <div class="col-12" id="emailError" aria-label="message d'erreur de validité de l'email"></div>
                     </div>
                     <div class="row">
-                        <label class="col-12" for="message">Message *</label>
-                        <textarea class="col-12" id="message" name="message"></textarea>
-                        <div class="col-12" id="messageError"></div>
+                        <label class="col-12" for="message" aria-label="message">Message *</label>
+                        <textarea class="col-12" id="message" name="message" aria-label="entrez un message" placeholder="Ecrivez ici.."></textarea>
+                        <div class="col-12" id="messageError" aria-label="message d'erreur pour le message vide"></div>
                     </div>
-                    <div id="emptyError"></div>
+                    <div id="emptyError" aria-label="message d'erreur d'un ou des champs vides"></div>
                     <div class="row" id="btn-submit">
-                        <button id="checking" class="col-6 col-sm-3" type="submit">Envoyer</button>
+                        <button id="checking" class="col-6 col-sm-3" type="submit"aria-label="envoyer le formulaire" role="button">Envoyer</button>
                     </div>
                 </form>
-                <div id="confirmed"></div>
-                <div id="feedback">
+                <div id="confirmed"aria-label="message de confirmation de l'envoie"></div>
+                <div id="feedback" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
                     <div>
-                        <p>Voulez vous vraiment envoyer le message ?</p>
-                        <button type="button" id="btn-yes">Oui</button>
-                        <button type="button" id="btn-cancel">Annuler</button>
+                        <p aria-label="Voulez vous vraiment envoyer le message ? ">Voulez vous vraiment envoyer le message ?</p>
+                        <button type="button" id="btn-yes" aria-label="confirmer l'envoie" role="button">Oui</button>
+                        <button type="button" id="btn-cancel" aria-label="annuler l'envoie" role="button">Annuler</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <span>&copy; Copyright 2024 Eva Garrigues</span>
+        <span aria-label="copyright 2024 Eva Garrigues">&copy; Copyright 2024 Eva Garrigues</span>
     </footer>
     <script src="../js/main.js"></script>
 </body>
