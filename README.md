@@ -16,7 +16,7 @@ Ce projet a été réalisé dans le cadre d'un examen d'une formation en Dévelo
 - Validation des données du formulaire de contact avec message de confirmation ou d'erreur.
 - Affichage d'une page indépendante pour les mentions légales et la politique de confidentialité.
 
-## Installation
+## Ouverture du projet
 1. Clonez le dépot sur votre machine locale:
 ```bash	
 git clone https://github.com/Skarbiee/portefolio.git
