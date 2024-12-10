@@ -51,7 +51,7 @@ body > header ul li a i, body > header > #btns-lang button, body main #resume > 
   cursor: pointer;
 }
 
-body, body > header > #btns-lang button, body main #contact > div #feedback, body footer {
+body, body > header > #btns-lang button, body footer {
   background-color: #B6A3A3;
 }
 
@@ -91,7 +91,7 @@ body main #home > article p, body main #projects > div article h3, body main #re
   font-size: 2em;
 }
 
-body main #contact > div #contactForm #btn-submit > button, body main #contact > div #feedback, body main #contact > div #feedback button, body main #contact > div #contactForm input, body main #contact > div #contactForm textarea {
+body main #contact > div #contactForm #btn-submit > button, body main #contact > div #feedback div button, body main #contact > div #contactForm input, body main #contact > div #contactForm textarea {
   border: #7D7983 2px solid;
   border-radius: 8px;
 }
@@ -309,15 +309,48 @@ body main #contact > div #contactForm #btn-submit > button {
   margin: 0.5em 0;
   padding: 0.25em;
 }
-body main #contact > div #feedback {
-  padding: 1em;
-  text-align: center;
-  position: fixed;
-  top: 60%;
-  display: block;
+body main #contact > div #contactForm .error {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25em 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #FCD1FC;
+  border: #c7a5c7 0.1em solid;
+  border-radius: 8px;
+  color: #404D7A;
 }
-body main #contact > div #feedback button {
-  margin: 0.5em 0;
+body main #contact > div .valid {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25em 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #d1fcd3;
+  border: #adc7a5 0.1em solid;
+  border-radius: 8px;
+  color: #404D7A;
+}
+body main #contact > div #feedback {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.877);
+  display: none;
+}
+body main #contact > div #feedback div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  padding: 1em;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #FCD1FC;
+  border: #c7a5c7 0.1em solid;
+  color: #404D7A;
+}
+body main #contact > div #feedback div button {
+  margin: 0.5em 1em;
   padding: 0.25em 0.5em;
 }
 body main #mentions h2 {
