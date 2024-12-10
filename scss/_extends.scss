@@ -1,9 +1,187 @@
 @use "sass:map";
-@use "_colors"      as c;
-@use "_typo"        as t;
+@use "_colors" as c;
+@use "_typo" as t;
 
+%no-deco{
+    text-decoration: none;
+}
 
-%text-main{
+%mtop2{
+    margin-top: 2em;
+}
+
+%mright2_5{
+    margin-right: 2.5em;
+}
+
+%w90100{
+    width: 90%;
+}
+
+%size1_25{
+    font-size: 1.25em;
+}
+
+%text-center{
+    text-align: center;
+}
+
+%spacebtwnContent{
+    justify-content: space-between;
+}
+
+%centermarge{
+    margin: 0 auto;
+}
+
+%headCenter{
+    margin: 0 auto;
+    width: 70%;
+}
+
+%clicky{
+    cursor: pointer;
+}
+
+%backgroundcolor{
+    background-color: map.get(c.$project, 'bg');
+}
+
+%dFlex{
+    display: flex;
+}
+
+%dFlexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+%active{
+    color: map.get(c.$project, 'active');
+}
+
+%default-text {
     color: map.get(c.$project, 'text');
     font-family: 'Inter';
+}
+
+%section-title{
+    color: map.get(c.$project, 'text');
+    font-family: 'Inter';
+    font-size: 3em;
+}
+
+%title-main {
+    color: map.get(c.$project, 'text');
+    font-family: 'Inter';
+    font-size: 4em;
+}
+
+%text-main {
+    color: map.get(c.$project, 'text');
+    font-family: 'Inter';
+    font-size: 2em;
+}
+
+%border-form {
+    border: #7D7983 2px solid;
+    border-radius: 8px;
+}
+
+%inputs{
+    @extend %border-form;
+    margin: 0 auto 1em auto;
+    padding: 0.5em;
+}
+
+%column {
+    display: flex;
+    flex-direction: column;
+}
+
+%centered {
+    @extend %column;
+    align-items: center;
+}
+
+%inline-list {
+    display: flex;
+    list-style: none;
+}
+
+%responsive-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-itemCenter {
+    display: flex;
+    align-items: center;
+}
+
+// Extends pour les medias queries de largeur max 1560px
+@media screen and (max-width: 1560px) {
+    %size1_75-1560{
+        font-size: 1.75em;
+    }
+}
+
+// Extends pour les medias queries de largeur max 1150px
+@media screen and (max-width: 1150px) {
+    %itemCenter-1150{
+        align-items: center;
+    }
+    %w90100-1150{
+        width: 90%;
+    }
+    %w100-1150{
+        width: 100%;
+    }
+}
+// Extends pour les medias queries de largeur max 1000px
+@media screen and (max-width:1000px) {
+    %flex-itemCenter-1000 {
+        display: flex;
+        align-items: center;
+    }
+    %reverse-textCenter-1000 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    %size1_5-1000{
+        font-size: 1.5em;
+    }
+}
+// Extends pour les medias queries de largeur max 820px
+@media screen and (max-width: 820px) {
+    %size1_5-820{
+        font-size: 1.5em;
+    }
+    %size1_25-820{
+        font-size: 1.25em;
+    }
+    %size1-820{
+        font-size: 1em;
+    }
+    %w100-820{
+        width: 100%;
+    }
+}
+// Extends pour les medias queries de largeur max 600px
+@media screen and (max-width: 600px) {
+    %size2-600{
+        font-size: 2em;
+    }
+    %size1_5-600{
+        font-size: 1.5em;
+    }
+    %size1_25-600{
+        font-size: 1.25em;
+    }
+    %size1-600{
+        font-size: 1em;
+    }
+    %w100-600{
+        width: 100%;
+    }
 }
