@@ -10,17 +10,19 @@
   font-family: "Inter";
   src: url(../css/frameworks/webfonts/Inter_24pt-Regular.ttf);
 }
-body > header > div button, body main > #home h2, body main > #home > article p, body main h2, body main #resume > div > div p, body main #resume > div > div > div > span, body main #resume aside p, body main #resume aside p a, body main #contact > div, body main #mentions article h3, body main #mentions article p, body footer {
+body > header > div button, body main #home h2, body main #home > article p, body main h2, body main #projects > div article h3, body main #resume > div > div p, body main #resume > div > div > div > span, body main #resume aside p, body main #resume aside p a, body main #contact > div, body main #mentions article h3, body main #mentions article p, body footer {
   color: #404D7A;
   font-family: "Inter";
 }
 
 body {
   background-color: #B6A3A3;
-  width: 70%;
+  min-height: 100vh;
   margin: 0 auto;
 }
 body > header {
+  margin: 0 auto;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,46 +76,53 @@ body > header > div button {
   cursor: pointer;
 }
 body main {
-  margin: 0;
+  margin: 0 auto;
+  width: 70%;
 }
-body main > #home {
-  margin: 13em auto 15.4em auto;
+body main #home {
+  margin: 12em auto 0 auto;
   display: flex;
   width: 90%;
+  display: none;
 }
-body main > #home h2 {
+body main #home h2 {
   font-size: 4em;
 }
-body main > #home > article {
+body main #home > article {
   display: flex;
   flex-direction: column;
 }
-body main > #home > article > header {
+body main #home > article > header {
   display: flex;
   margin-bottom: 3em;
+  align-items: center;
 }
-body main > #home > article > header > img {
+body main #home > article > header > img {
   margin: 0 auto;
   width: 15em;
   height: 15em;
   border-radius: 50%;
 }
-body main > #home > article p {
+body main #home > article p {
+  text-align: center;
   font-size: 2em;
 }
 body main h2 {
   font-size: 3em;
 }
 body main #projects {
-  margin: 0 0 4.7em 0;
   display: none;
 }
 body main #projects > div {
-  margin: 0.4em 0;
-  justify-content: space-around;
+  margin: 1em 0;
+  justify-content: space-between;
 }
 body main #projects > div article {
-  width: 19em;
+  padding: 0.5em;
+  border: solid 2px #7D7983;
+  border-radius: 5px;
+  text-align: center;
+  width: 16em;
 }
 body main #projects > div article div {
   margin: 0 auto;
@@ -125,9 +134,15 @@ body main #projects > div article div img {
   height: 14em;
   width: 14em;
 }
-body main #resume {
-  margin-bottom: 2.15em;
-  display: none;
+body main #projects > div article h3 {
+  font-size: 1.2em;
+  text-align: center;
+}
+body main #projects > div article span {
+  font-size: 1em;
+}
+body main #projects > div article p {
+  font-size: 0.8em;
 }
 body main #resume > div {
   display: flex;
@@ -141,7 +156,7 @@ body main #resume > div > div p {
   margin: 1em 0 0 0;
 }
 body main #resume > div > div > div {
-  margin-top: 3em;
+  margin-top: 2em;
 }
 body main #resume > div > div > div > span {
   font-size: 2em;
@@ -212,9 +227,6 @@ body main #resume aside p a > i:hover {
     transform: translateX(0px);
   }
 }
-body main #contact {
-  margin-bottom: 11em;
-}
 body main #contact > div {
   display: flex;
   flex-direction: column;
@@ -241,17 +253,14 @@ body main #contact > div #contactForm textarea {
   border-radius: 8px;
   border: #7D7983 2px solid;
 }
-body main #contact > div #contactForm > #btn-submit {
+body main #contact > div #contactForm #btn-submit {
   justify-content: center;
 }
-body main #contact > div #contactForm > #btn-submit > button {
+body main #contact > div #contactForm #btn-submit > button {
   margin: 0.5em 0;
   padding: 0.25em;
   border-radius: 8px;
   border: #7D7983 2px solid;
-}
-body main #mentions {
-  margin-bottom: 6em;
 }
 body main #mentions article {
   width: 90%;
@@ -268,6 +277,252 @@ body main #mentions > h2 {
   margin: 0 0 0.5em 0;
 }
 body footer {
+  background-color: #B6A3A3;
   margin-top: auto;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 1150px) {
+  body > header {
+    width: 90%;
+  }
+  body main {
+    width: 90%;
+  }
+  body main #home {
+    margin-top: 1em;
+  }
+  body main #home header {
+    align-items: center;
+    text-align: center;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  body main #home header div {
+    margin-top: 2em;
+    width: 100%;
+  }
+  body main #projects > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #projects > div article {
+    padding: 1em 0;
+    margin-bottom: 1em;
+    width: 30em;
+  }
+  body main #projects > div article div img {
+    height: 28em;
+    width: 28em;
+  }
+  body main #projects > div article h3 {
+    font-size: 1.5em;
+  }
+  body main #projects > div article span {
+    font-size: 1.25em;
+  }
+  body main #projects > div article p {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 1560px) {
+  body main #resume div {
+    align-items: center;
+  }
+  body main #resume div div p {
+    font-size: 1.75em;
+  }
+  body main #resume div div div span {
+    font-size: 1.75em;
+  }
+  body main #resume div div div ul li a i {
+    font-size: 3em;
+  }
+  body main #resume div div div ul li a span {
+    font-size: 1.25em;
+  }
+  body main #resume div aside img {
+    width: 25em;
+  }
+  body main #resume div aside p {
+    font-size: 1.75em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body main {
+    width: 90%;
+  }
+  body main #resume div {
+    flex-direction: column;
+  }
+  body main #resume div div {
+    width: 100%;
+    text-align: center;
+  }
+  body main #resume div div p {
+    font-size: 1.5em;
+  }
+  body main #resume div div div span {
+    font-size: 1.5em;
+  }
+  body main #resume div div div ul {
+    justify-content: center;
+  }
+  body main #resume div aside {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  body main #resume div aside img {
+    width: 40em;
+    margin-bottom: 2em;
+  }
+  body main #resume div aside p {
+    font-size: 1.5em;
+  }
+  body main #resume div aside p a i {
+    rotate: 90deg;
+  }
+}
+@media screen and (max-width: 820px) {
+  body header {
+    flex-direction: column;
+  }
+  body header ul li {
+    margin-right: 0.5em;
+  }
+  body header ul li a i {
+    font-size: 2.3em;
+  }
+  body header ul li a span {
+    font-size: 1.3em;
+  }
+  body header > div {
+    margin: 0.5em 0.5em 0.5em 0;
+  }
+  body header > div button {
+    font-size: 1.25em;
+  }
+  body main #home p {
+    font-size: 1em;
+  }
+  body main #projects > div article {
+    width: 20em;
+  }
+  body main #projects > div article div img {
+    height: 18em;
+    width: 18em;
+  }
+  body main #projects > div article h3 {
+    font-size: 1.25em;
+  }
+  body main #projects > div article span {
+    font-size: 1em;
+  }
+  body main #projects > div article p {
+    font-size: 0.9em;
+  }
+  body main #resume div {
+    flex-direction: column;
+  }
+  body main #resume div div {
+    width: 100%;
+    text-align: center;
+  }
+  body main #resume div div p {
+    font-size: 1.25em;
+  }
+  body main #resume div div div span {
+    font-size: 1.25em;
+  }
+  body main #resume div div div ul {
+    justify-content: center;
+  }
+  body main #resume div aside img {
+    width: 30em;
+  }
+  body main #resume div aside p {
+    font-size: 1.5em;
+  }
+  body main #resume div aside p a i {
+    rotate: 90deg;
+  }
+}
+@media screen and (max-width: 600px) {
+  body header {
+    width: 100%;
+    margin: 0;
+  }
+  body header ul {
+    margin-right: 1.2em;
+  }
+  body header ul li {
+    margin-right: 0.5em;
+  }
+  body header ul li a i {
+    font-size: 2em;
+  }
+  body header ul li a span {
+    font-size: 0.7em;
+  }
+  body header > div button {
+    font-size: 1em;
+  }
+  body main #home article header div h2 {
+    font-size: 2em;
+  }
+  body main #home article header img {
+    width: 10em;
+    height: 10em;
+  }
+  body main #home article p {
+    font-size: 1.25em;
+  }
+  body main #projects h2 {
+    font-size: 2em;
+  }
+  body main #projects > div article {
+    margin-bottom: 1em;
+    width: 16em;
+  }
+  body main #projects > div article div img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 14em;
+    width: 14em;
+  }
+  body main #resume h2 {
+    font-size: 2em;
+  }
+  body main #resume div {
+    flex-direction: column;
+  }
+  body main #resume div div {
+    width: 100%;
+    text-align: center;
+  }
+  body main #resume div div p {
+    font-size: 1em;
+  }
+  body main #resume div div div span {
+    font-size: 1em;
+  }
+  body main #resume div aside img {
+    display: none;
+  }
+  body main #resume div aside p {
+    font-size: 1em;
+  }
+  body main #resume div aside p a {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  body main #resume div aside p a i {
+    rotate: 180deg;
+  }
 }/*# sourceMappingURL=style.css.map */

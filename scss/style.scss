@@ -7,10 +7,12 @@
 
 body {
     background-color: map.get(c.$project, 'bg');
-    width: 70%;
+    min-height: 100vh;
     margin: 0 auto;
 
     >header {
+        margin: 0 auto;
+        width: 70%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -79,13 +81,14 @@ body {
 
 
     main {
-        margin: 0;;
+        margin: 0 auto;
+        width: 70%;
 
-        >#home {
-            margin: 13em auto 15.4em auto;
+        #home {
+            margin: 12em auto 0 auto;
             display: flex;
             width: 90%;
-            // display: none;
+            display: none;
 
             h2 {
                 @extend %text-main;
@@ -96,19 +99,26 @@ body {
                 display: flex;
                 flex-direction: column;
 
+
                 >header {
                     display: flex;
                     margin-bottom: 3em;
+                    align-items: center;
+
+
 
                     >img {
                         margin: 0 auto;
                         width: 15em;
                         height: 15em;
                         border-radius: 50%;
+
                     }
+
                 }
 
                 p {
+                    text-align: center;
                     @extend %text-main;
                     font-size: 2em;
                 }
@@ -121,15 +131,18 @@ body {
         }
 
         #projects {
-            margin: 0 0 4.7em 0;
             display: none;
 
             >div {
-                margin: 0.4em 0;
-                justify-content: space-around;
+                margin: 1em 0;
+                justify-content: space-between;
 
                 article {
-                    width: 19em;
+                    padding: 0.5em;
+                    border: solid 2px map.get(c.$project, 'dark');
+                    border-radius: 5px;
+                    text-align: center;
+                    width: 16em;
 
                     div {
                         margin: 0 auto;
@@ -141,13 +154,29 @@ body {
                             width: 14em;
                         }
                     }
+
+                    h3 {
+                        @extend %text-main;
+                        font-size: 1.2em;
+                        text-align: center;
+
+                    }
+
+                    span {
+
+                        font-size: 1em;
+                    }
+
+                    p {
+                        font-size: 0.8em;
+                    }
                 }
             }
         }
 
         #resume {
-            margin-bottom: 2.15em;
-            display:none;
+
+            // display: none;
             >div {
                 display: flex;
                 justify-content: space-between;
@@ -162,7 +191,7 @@ body {
                     }
 
                     >div {
-                        margin-top: 3em;
+                        margin-top: 2em;
 
                         >span {
                             @extend %text-main;
@@ -259,7 +288,7 @@ body {
         }
 
         #contact {
-            margin-bottom: 11em ;
+
             >div {
                 display: flex;
                 flex-direction: column;
@@ -290,7 +319,7 @@ body {
                         border: #7D7983 2px solid;
                     }
 
-                    >#btn-submit {
+                    #btn-submit {
                         justify-content: center;
 
                         >button {
@@ -305,15 +334,17 @@ body {
         }
 
         #mentions {
-            margin-bottom: 6em;
+
             article {
                 width: 90%;
                 margin: 0.5em auto;
+
                 h3 {
                     @extend %text-main;
                     font-size: 2.25em;
                     margin-bottom: 0.5em
                 }
+
                 p {
                     @extend %text-main;
                     font-size: 2em;
@@ -327,12 +358,405 @@ body {
     }
 
     footer {
-        margin-top:auto;
+        background-color: map.get(c.$project, 'bg');
+        margin-top: auto;
+        bottom: 0;
+        position: fixed;
         @extend %text-main;
+        width: 100%;
         text-align: center;
     }
-
 }
+
+@media screen and (max-width: 1150px) {
+    body {
+        >header {
+            width: 90%;
+        }
+
+        main {
+            width: 90%;
+
+            #home {
+                margin-top: 1em;
+
+                header {
+                    align-items: center;
+                    text-align: center;
+                    flex-direction: column-reverse;
+                    width: 100%;
+
+                    div {
+                        margin-top: 2em;
+                        width: 100%;
+                    }
+                }
+            }
+
+            #projects {
+                >div {
+                    flex-direction: column;
+                    align-items: center;
+
+                    article {
+                        padding: 1em 0;
+                        margin-bottom: 1em;
+                        width: 30em;
+
+                        div {
+                            img {
+                                height: 28em;
+                                width: 28em;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 1.5em;
+                        }
+
+                        span {
+                            font-size: 1.25em;
+                        }
+
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    body {
+        main {
+            #resume {
+                div {
+                    align-items: center;
+
+                    div {
+                        p {
+                            font-size: 1.75em;
+                        }
+
+                        div {
+                            span {
+                                font-size: 1.75em;
+                            }
+
+                            ul {
+                                li {
+                                    a {
+                                        i {
+                                            font-size: 3em;
+                                        }
+
+                                        span {
+                                            font-size: 1.25em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    aside {
+
+                        img {
+                            width: 25em;
+                        }
+
+                        p {
+                            font-size: 1.75em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        main {
+            width: 90%;
+
+            #resume {
+                div {
+                    flex-direction: column;
+
+                    div {
+                        width: 100%;
+                        text-align: center;
+
+                        p {
+                            font-size: 1.5em;
+                        }
+
+                        div {
+                            span{
+                                font-size: 1.5em
+                            }
+                            ul {
+                                justify-content: center;
+                            }
+                        }
+                    }
+
+                    aside {
+                        display: flex;
+                        width: 100%;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        text-align: center;
+                        img {
+                            width: 40em;
+                            margin-bottom: 2em;
+                        }
+                        p{
+                            font-size: 1.5em;
+                            a{
+                                i{
+                                    rotate: 90deg;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:820px) {
+    body {
+        header {
+            flex-direction: column;
+
+            ul {
+                li {
+                    margin-right: 0.5em;
+
+                    a {
+                        i {
+                            font-size: 2.3em;
+                        }
+
+                        span {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+
+            >div {
+                margin: 0.5em 0.5em 0.5em 0;
+
+                button {
+                    font-size: 1.25em;
+                }
+            }
+        }
+
+        main {
+            #home {
+                p {
+                    font-size: 1em;
+                }
+            }
+
+            #projects {
+                >div {
+                    article {
+                        width: 20em;
+
+                        div {
+                            img {
+                                height: 18em;
+                                width: 18em;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 1.25em;
+                        }
+
+                        span {
+                            font-size: 1em;
+                        }
+
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+
+            #resume{
+                div {
+                    flex-direction: column;
+
+                    div {
+                        width: 100%;
+                        text-align: center;
+
+                        p {
+                            font-size: 1.25em;
+                        }
+
+                        div {
+                            span{
+                                font-size: 1.25em
+                            }
+                            ul {
+                                justify-content: center;
+                            }
+                        }
+                    }
+
+                    aside {
+                        img {
+                            width: 30em;
+                        }
+                        p{
+                            font-size: 1.5em;
+                            a{
+                                i{
+                                    rotate: 90deg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        header {
+            width: 100%;
+            margin: 0;
+
+            ul {
+                margin-right: 1.2em;
+
+                li {
+                    margin-right: 0.5em;
+
+                    a {
+                        i {
+                            font-size: 2em;
+                        }
+
+                        span {
+                            font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+
+            >div {
+                button {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        main {
+            #home {
+                article {
+                    header {
+                        div {
+                            h2 {
+                                font-size: 2em;
+                            }
+                        }
+
+                        img {
+                            width: 10em;
+                            height: 10em;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.25em;
+                    }
+                }
+            }
+
+            #projects {
+                h2 {
+                    font-size: 2em;
+                }
+
+                >div {
+                    article {
+                        margin-bottom: 1em;
+                        width: 16em;
+
+                        div {
+                            img {
+                                object-fit: cover;
+                                height: 14em;
+                                width: 14em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #resume{
+                h2 {
+                    font-size: 2em;
+                }
+                div {
+                    flex-direction: column;
+
+                    div {
+                        width: 100%;
+                        text-align: center;
+
+                        p {
+                            font-size: 1em;
+                        }
+
+                        div {
+                            span{
+                                font-size: 1em
+                            }
+                        }
+                    }
+
+                    aside {
+                        img {
+                            display:none;
+                        }
+                        p{
+                            font-size: 1em;
+                            a{
+                                font-weight: bold;
+                                cursor: pointer;
+                                i{
+                                    rotate: 180deg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
 
 // @media screen and (max-width: 1020px) {
 //     body {
