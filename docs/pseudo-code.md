@@ -19,22 +19,27 @@ Définir l'événement `submit` sur le formulaire avec l'id `contactForm` :
 - Bloquer par défaut le comportement de l'événement `submit`(e.preventDefalt())
 
 ### Récupérer les éléments HTML pour afficher les erreurs et le message de validation:
-  - `NameError`,
-  - `FirstNameError`,
-  - `EmailError`,
-  - `EmptyInput`,
-  - `Feedback`
+  - `NameError`: div pour afficher le message d'erreur du champ du nom.
+  - `FirstNameError`: div pour afficher le message d'erreur du champ du prénom.
+  - `EmailError`: div pour afficher le message d'erreur du champ de l'email.
+  - `EmptyInput`: div pour afficher le message d'erreur du champ du message.
+  - `Feedback`: div pour afficher le message de validation finale du formulaire.
+
+### Récupérer les éléments HTML pour valider le formulaire et la modale:
+  - `Confirmed`: identifiant de la modale.
+  - `BtnYes`: identifiant du bouton de validation du modale.
+  - `BtnCancel`: identifiant du bouton d'annulation du modale.
 
 ### Récupérer les valeurs saisies dans les champs de formulaire:
-  - `Name`: valeur du champ "name" sans espace inutiles
-  - `FirstName`: valeur du champ "firstName" sans espace inutiles
-  - `Email`: valeur du champ "email" sans espace inutiles
-  - `Message`: valeur du champ "message" sans espace inutiles
+  - `Name`: valeur du champ "name" sans espace inutiles.
+  - `FirstName`: valeur du champ "firstName" sans espace inutiles.
+  - `Email`: valeur du champ "email" sans espace inutiles.
+  - `Message`: valeur du champ "message" sans espace inutiles.
 
 - Initialiser la variable booléenne `isValid` à vrai (`true`) indiquant que le formulaire est valide.
 
 ### Effacer les messages d'erreurs et de validation précédents:
-  - Réinitialiser les contenus HTML des éléments `NameError`, `FirstNameError`, `EmailError`, `EmptyInput` et `Feedback` à une chaîne de caractères vide.
+  - Réinitialiser les contenus HTML des éléments `NameError`, `FirstNameError`, `EmailError`, `EmptyInput` avec une chaîne de caractères vide.
 
 ### Vérifier les champs du formulaire:
 
@@ -69,7 +74,13 @@ Définir l'événement `submit` sur le formulaire avec l'id `contactForm` :
 
   #### Si tous les champs sont valides:
   - Si `isValid` est vrai (`true`):
-    - Afficher le message de validation dans `Feedback` avec la fonction `promptHTML`
-    - Réinitialiser le formulaire avec la méthode reset()
-
+    - Afficher le block `Feedback` pour afficher la modale avec un `display block`
+    ##### Bouton de confirmation:
+      - Ajout d'un écouteur d'événement `click` sur le bouton `BtnYes`(si oui):
+        - Masquer la modale `Feedback` avec un `display none`
+        -Affichage du message final d'envoie dans `Confirmed`
+        - Réinitialisation du formulaire avec la méthode `reset()`
+    ##### Bouton d'annulation:
+      - Ajout d'un écouteur d'événement `click` sur le bouton `BtnCancel` (si Annuler):
+        - Masquer la modale `Feedback` avec un `display none`
 Fin

@@ -149,8 +149,6 @@ body {
         }
 
         #resume {
-
-            // display: none;
             h2 {
                 @extend %section-title;
             }
@@ -278,21 +276,47 @@ body {
                             @extend %border-form;
                         }
                     }
-                }
-                #feedback {
-                    padding: 1em;
-                    text-align:center;
-                    @extend %backgroundcolor;
-                    @extend %border-form;
-                    position: fixed;
-                    top: 60%;
-                    display: block;
-                
-                    button {
-                        margin: 0.5em 0;
-                        padding: 0.25em 0.5em;
-                        @extend %border-form;
+
+                    .error {
+                        @include m.form-prompt(map.get(c.$project, 'light'), #c7a5c7);
                     }
+                }
+
+                .valid {
+                    @include m.form-prompt(#d1fcd3, #adc7a5);
+                }
+
+                #feedback {
+                    position: fixed;
+                    top: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.877);
+                    display: none;
+
+                    div {
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        padding: 1em;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+
+                        background-color: map.get(c.$project, 'light');
+                        border: #c7a5c7 0.1em solid;
+                        color: map.get(c.$project, 'text');
+
+
+                        button {
+                            margin: 0.5em 1em;
+                            padding: 0.25em 0.5em;
+                            @extend %border-form;
+                        }
+                    }
+
+
+
                 }
             }
         }

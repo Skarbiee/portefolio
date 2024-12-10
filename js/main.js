@@ -16,7 +16,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const EmailError = document.getElementById('emailError');
     const EmptyError = document.getElementById('emptyError');
     const Feedback = document.getElementById('feedback');
-    const Checking = document.getElementById('checking');
 
     const Confirmed = document.getElementById('confirmed');
     const BtnYes = document.getElementById('btn-yes');
@@ -34,7 +33,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     FirstNameError.innerHTML = "";
     EmailError.innerHTML = "";
     EmptyError.innerHTML = "";
-    Feedback.innerHTML = "";
 
     // Vérifier les champs
     if (!/^[A-Za-zéèêïöôü-]+$/.test(Name)) { // Si le nom n'a pas le bon format
@@ -67,15 +65,18 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     }
 
     if (isValid) { // Si tous les champs sont valides
-         if(Checking.click){ // Si le bouton "Envoyer" est cliqué
-            Feedback.style.display = 'block'; // Le message suivant s'affiche
-            if (BtnYes.click) { // Si "Oui" alors
-                Feedback.style.display = 'none'; // La demande devient invisible et le message de confirmation apparait
-                promptHTML(Confirmed, "valid", `Votre message a bien été envoyé !`);
-                document.getElementById('contactForm').reset() // Réinitialisation du formualire
-            } else { // Sinon la demande devient invisible
-                Feedback.style.display = 'none';
-            }
-        }
+        Feedback.style.display = 'block';
+        // Bouton de confirmation
+        BtnYes.addEventListener('click', function () {
+            Feedback.style.display = 'none';
+            promptHTML(Confirmed, "valid", `Votre message a bien été envoyé !`);
+            document.getElementById('contactForm').reset() // Réinitialisation du formualire
+        });
+        // Bouton d'annulation
+        BtnCancel.addEventListener('click', function () {
+            Feedback.style.display = 'none';
+        });
     }
 });
+
+

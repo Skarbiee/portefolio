@@ -1,4 +1,17 @@
-@mixin image-size($size){
+@use 'sass:map';
+@use 'colors' as c;
+
+@mixin image-size($size) {
     width: $size;
     height: $size;
+}
+
+@mixin form-prompt($color-bg, $color-border) {
+    width:fit-content;
+    padding: 0.25em 0.5em;
+    margin-bottom: 0.5em;
+    background-color: $color-bg;
+    border: $color-border 0.1em solid;
+    border-radius: 8px;
+    color: map.get(c.$project, 'text');
 }
