@@ -32,7 +32,6 @@ Définir l'événement `submit` sur le formulaire avec l'id `contactForm` :
   - `Message`: valeur du champ "message" sans espace inutiles
 
 - Initialiser la variable booléenne `isValid` à vrai (`true`) indiquant que le formulaire est valide.
-- Initialiser la variable `margein` à 0 permettant de définir la marge en fonction des messages d'erreur et de validation.
 
 ### Effacer les messages d'erreurs et de validation précédents:
   - Réinitialiser les contenus HTML des éléments `NameError`, `FirstNameError`, `EmailError`, `EmptyInput` et `Feedback` à une chaîne de caractères vide.
@@ -72,15 +71,5 @@ Définir l'événement `submit` sur le formulaire avec l'id `contactForm` :
   - Si `isValid` est vrai (`true`):
     - Afficher le message de validation dans `Feedback` avec la fonction `promptHTML`
     - Réinitialiser le formulaire avec la méthode reset()
-
-  #### En fonction du nombre d'erreurs, définir la marge par rapport a la valeur de margein:
-  - Si margein est égal à 4:
-    le style de la  section id `contact` pour le `margin-bottom` est égal à `5em`
-  - Sinon Si margein est égal à 3:
-      le style de la  section id `contact` pour le `margin-bottom` est égal à `6.5em`
-    - Sinon Si margein est égal à 2:
-        le style de la  section id `contact` pour le `margin-bottom` est égal à `8em`
-      - Sinon Si margein est égal à 1:
-          le style de la  section id `contact` pour le `margin-bottom` est égal à `9.5em`
 
 Fin
