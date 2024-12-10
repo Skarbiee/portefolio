@@ -19,40 +19,49 @@ body {
         ul {
             margin-top: 1em;
             @extend %inline-list;
+
             li {
                 @extend %dFlex;
                 @extend %mright2_5;
+
                 a {
                     @extend %centered;
                     @extend %no-deco;
+
                     i {
                         color: map.get(c.$project, 'light');
                         font-size: 3.5em;
                         @extend %clicky;
                         transition: transform 300ms;
+
                         &:hover {
-                           @extend %active;
+                            @extend %active;
                             transform: translateY(-10px);
                         }
                     }
+
                     .active {
                         @extend %active;
                     }
+
                     span {
                         @extend %active;
                         font-family: t.$icon-font;
                         transition: 500ms;
                         opacity: 0;
                     }
+
                     i:hover+span {
                         opacity: 1;
                     }
                 }
             }
         }
+
         >#btns-lang {
             margin-right: 3em;
             @extend %flex-itemCenter;
+
             button {
                 @extend %size1_25;
                 @extend %default-text;
@@ -62,100 +71,127 @@ body {
             }
         }
     }
+
     main {
         @extend %headerCenter;
+
         #home {
             margin: 12em auto 0 auto;
             @extend %dFlex;
             @extend %w90100;
+
             h2 {
                 @extend %title-main;
             }
+
             >article {
                 @extend %dFlexCol;
+
                 >header {
                     @extend %flex-itemCenter;
                     margin-bottom: 3em;
+
                     >img {
                         @extend %centermarge;
                         @include m.image-size(15em);
                         border-radius: 50%;
                     }
                 }
+
                 p {
                     @extend %text-center;
                     @extend %text-main;
                 }
             }
         }
+
         #projects {
             h2 {
                 @extend %section-title;
             }
+
             >div {
                 margin: 1em 0;
                 @extend %spacebtwnContent;
+
                 article {
                     padding: 0.5em;
                     border: solid 2px map.get(c.$project, 'dark');
                     border-radius: 5px;
                     @extend %text-center;
                     width: 16em;
+
                     div {
                         @extend %centermarge;
                         @extend %text-center;
+
                         img {
                             object-fit: cover;
                             @include m.image-size(14em);
                         }
                     }
+
                     h3 {
                         @extend %text-main;
                         font-size: 1.2em;
                         @extend %text-center;
                     }
+
                     span {
                         font-size: 1em;
                     }
+
                     p {
                         font-size: 0.8em;
                     }
                 }
             }
         }
+
         #resume {
-             // display: none;
+
+            // display: none;
             h2 {
                 @extend %section-title;
             }
+
             >div {
                 @extend %responsive-content;
+
                 >div {
                     width: 50%;
+
                     p {
                         @extend %text-main;
                         margin: 1em 0 0 0;
                     }
+
                     >div {
                         @extend %mtop2;
+
                         >span {
                             @extend %text-main;
                         }
+
                         >ul {
                             @extend %mtop2;
                             @extend %inline-list;
+
                             >li {
                                 @extend %inline-list;
                                 @extend %mright2_5;
+
                                 >a {
                                     @extend %centered;
                                     @extend %no-deco;
+
                                     >i {
                                         color: map.get(c.$code, 'text');
                                         font-size: 4em;
                                         @extend %clicky;
                                         transition: transform 300ms;
                                     }
+
                                     >span {
                                         color: map.get(c.$code, 'text');
                                         font-family: t.$icon-font;
@@ -163,9 +199,11 @@ body {
                                         transition: 500ms;
                                         opacity: 0;
                                     }
+
                                     >i:hover {
                                         transform: translateY(-15px);
                                     }
+
                                     >i:hover+span {
                                         opacity: 1;
                                     }
@@ -175,21 +213,27 @@ body {
                     }
                 }
             }
+
             aside {
                 margin-left: 1em;
                 width: 45%;
+
                 img {
                     width: 30.5em;
                 }
+
                 p {
                     @extend %text-main;
+
                     a {
                         @extend %no-deco;
                         @extend %default-text;
                         cursor: default;
+
                         i {
                             @extend %clicky;
                         }
+
                         >i:hover {
                             animation: yippie 800ms infinite;
                         }
@@ -197,29 +241,37 @@ body {
                 }
             }
         }
+
         #contact {
             h2 {
                 @extend %section-title;
             }
+
             >div {
                 @extend %centered;
                 padding: 1em 0 0 0;
                 @extend %default-text;
+
                 #contactForm {
                     width: 40%;
                     @extend %centermarge;
                     padding: 4em 0;
+
                     label {
                         margin-bottom: 0.5em;
                     }
+
                     input {
                         @extend %inputs;
                     }
+
                     textarea {
                         @extend %inputs;
                     }
+
                     #btn-submit {
                         justify-content: center;
+
                         >button {
                             margin: 0.5em 0;
                             padding: 0.25em;
@@ -227,20 +279,39 @@ body {
                         }
                     }
                 }
+                #feedback {
+                    padding: 1em;
+                    text-align:center;
+                    @extend %backgroundcolor;
+                    @extend %border-form;
+                    position: fixed;
+                    top: 60%;
+                    display: block;
+                
+                    button {
+                        margin: 0.5em 0;
+                        padding: 0.25em 0.5em;
+                        @extend %border-form;
+                    }
+                }
             }
         }
+
         #mentions {
             h2 {
                 @extend %section-title;
                 margin: 0 0 0.8em 0;
             }
+
             article {
                 @extend %w90100;
                 margin: 0.5em auto;
+
                 h3 {
                     @extend %text-main;
                     margin-bottom: 0.1em;
                 }
+
                 p {
                     text-align: justify;
                     @extend %default-text;
@@ -249,6 +320,7 @@ body {
             }
         }
     }
+
     footer {
         @extend %backgroundcolor;
         margin-top: auto;
@@ -267,20 +339,24 @@ body {
             #resume {
                 div {
                     align-items: center;
+
                     div {
                         p {
                             @extend %size1_75-1560;
                         }
+
                         div {
                             span {
                                 @extend %size1_75-1560;
                             }
+
                             ul {
                                 li {
                                     a {
                                         i {
                                             font-size: 3em;
                                         }
+
                                         span {
                                             font-size: 1.25em;
                                         }
@@ -289,10 +365,12 @@ body {
                             }
                         }
                     }
+
                     aside {
                         img {
                             width: 25em;
                         }
+
                         p {
                             @extend %size1_75-1560;
                         }
@@ -302,6 +380,7 @@ body {
         }
     }
 }
+
 // Medias queries de largeur max 1150px
 @media screen and (max-width: 1150px) {
     body {
@@ -361,39 +440,49 @@ body {
         }
     }
 }
+
 // Medias queries de largeur max 1000px
 @media screen and (max-width: 1000px) {
     body {
         main {
             width: 90%;
+
             #resume {
                 div {
                     flex-direction: column;
+
                     div {
                         width: 100%;
                         text-align: center;
+
                         p {
                             @extend %size1_5-1000;
                         }
+
                         div {
                             span {
                                 @extend %size1_5-1000;
                             }
+
                             ul {
                                 justify-content: center;
                             }
                         }
                     }
+
                     aside {
                         width: 100%;
                         @extend %flex-itemCenter-1000;
                         @extend %reverse-textCenter-1000;
+
                         img {
                             width: 40em;
                             margin-bottom: 2em;
                         }
+
                         p {
                             @extend %size1_5-1000;
+
                             a {
                                 i {
                                     rotate: 90deg;
@@ -406,85 +495,106 @@ body {
         }
     }
 }
+
 // Medias queries de largeur max 820px
 @media screen and (max-width:820px) {
     body {
         header {
             flex-direction: column;
+
             ul {
                 li {
                     margin-right: 0.5em;
+
                     a {
                         i {
                             font-size: 2.3em;
                         }
+
                         span {
                             font-size: 1.3em;
                         }
                     }
                 }
             }
+
             >div {
                 margin: 0.5em 0.5em 0.5em 0;
+
                 button {
                     @extend %size1_25-820;
                 }
             }
         }
+
         main {
             #home {
                 p {
                     @extend %size1-820;
                 }
             }
+
             h2 {
                 font-size: 2.75em;
             }
+
             #projects {
                 >div {
                     article {
                         width: 20em;
+
                         div {
                             img {
                                 @include m.image-size(18em);
                             }
                         }
+
                         h3 {
                             @extend %size1_25-820;
                         }
+
                         span {
                             @extend %size1-820;
                         }
+
                         p {
                             font-size: 0.9em;
                         }
                     }
                 }
             }
+
             #resume {
                 div {
                     flex-direction: column;
+
                     div {
                         @extend %w100-820;
                         text-align: center;
+
                         p {
                             @extend %size1_25-820;
                         }
+
                         div {
                             span {
                                 @extend %size1_25-820;
                             }
+
                             ul {
                                 justify-content: center;
                             }
                         }
                     }
+
                     aside {
                         img {
                             width: 30em;
                         }
+
                         p {
                             @extend %size1_5-820;
+
                             a {
                                 i {
                                     rotate: 90deg;
@@ -494,6 +604,7 @@ body {
                     }
                 }
             }
+
             #contact {
                 >div {
                     #contactForm {
@@ -501,6 +612,7 @@ body {
                     }
                 }
             }
+
             #mentions {
                 article {
                     @extend %w100-820;
@@ -509,6 +621,7 @@ body {
                         font-size: 2em;
                         margin-bottom: 0.1em;
                     }
+
                     p {
                         @extend %size1_5-820;
                     }
@@ -517,16 +630,20 @@ body {
         }
     }
 }
+
 // Medias queries de largeur max 600px
 @media screen and (max-width: 600px) {
     body {
         header {
             @extend %w100-600;
             margin: 0;
+
             ul {
                 margin-right: 1.2em;
+
                 li {
                     margin-right: 0.5em;
+
                     a {
                         i {
                             @extend %size2-600;
@@ -539,12 +656,13 @@ body {
                 }
             }
 
-          >div {
+            >div {
                 button {
                     @extend %size1-600;
                 }
             }
         }
+
         main {
             #home {
                 article {
@@ -554,23 +672,28 @@ body {
                                 @extend %size2-600;
                             }
                         }
+
                         img {
                             @include m.image-size(10em);
                         }
                     }
+
                     p {
                         @extend %size1_25-600;
                     }
                 }
             }
+
             #projects {
                 h2 {
                     @extend %size2-600;
                 }
+
                 >div {
                     article {
                         margin-bottom: 1em;
                         width: 16em;
+
                         div {
                             img {
                                 @include m.image-size(14em);
@@ -579,34 +702,43 @@ body {
                     }
                 }
             }
+
             #resume {
                 h2 {
                     @extend %size2-600;
                 }
+
                 div {
                     flex-direction: column;
+
                     div {
                         @extend %w100-600;
                         text-align: center;
+
                         p {
                             @extend %size1-600;
                         }
+
                         div {
                             span {
                                 @extend %size1-600;
                             }
                         }
                     }
+
                     aside {
                         img {
                             display: none;
                         }
+
                         p {
                             @extend %size1-600;
                             padding-bottom: 2em;
+
                             a {
                                 font-weight: bold;
-                                @extend %clicky;
+                                cursor: pointer;
+
                                 i {
                                     rotate: 180deg;
                                 }
@@ -615,27 +747,33 @@ body {
                     }
                 }
             }
+
             #contact {
                 h2 {
                     @extend %size2-600;
                     width: 10em;
                 }
+
                 >div {
                     #contactForm {
                         width: 90%;
                     }
                 }
             }
+
             #mentions {
                 h2 {
                     @extend %size2-600;
                 }
+
                 article {
                     @extend %w100-600;
+
                     h3 {
                         @extend %size1_25-600;
                         margin-bottom: 0.1em;
                     }
+
                     p {
                         @extend %size1-600;
                     }

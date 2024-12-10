@@ -10,7 +10,48 @@
   font-family: "Inter";
   src: url(../css/frameworks/webfonts/Inter_24pt-Regular.ttf);
 }
-body, body > header > #btns-lang button, body footer {
+body > header ul li a, body main #resume > div > div > div > ul > li > a, body main #resume aside p a {
+  text-decoration: none;
+}
+
+body main #resume > div > div > div, body main #resume > div > div > div > ul {
+  margin-top: 2em;
+}
+
+body > header ul li, body main #resume > div > div > div > ul > li {
+  margin-right: 2.5em;
+}
+
+body main #home, body main #mentions article {
+  width: 90%;
+}
+
+body > header > #btns-lang button, body main #resume > div > div > div > ul > li > a > span {
+  font-size: 1.25em;
+}
+
+body main #home > article p, body main #projects > div article, body main #projects > div article div, body main #projects > div article h3, body footer {
+  text-align: center;
+}
+
+body > header, body main #projects > div {
+  justify-content: space-between;
+}
+
+body, body main #home > article > header > img, body main #projects > div article div, body main #contact > div #contactForm {
+  margin: 0 auto;
+}
+
+body > header, body main {
+  margin: 0 auto;
+  width: 70%;
+}
+
+body > header ul li a i, body > header > #btns-lang button, body main #resume > div > div > div > ul > li > a > i, body main #resume aside p a i {
+  cursor: pointer;
+}
+
+body, body > header > #btns-lang button, body main #contact > div #feedback, body footer {
   background-color: #B6A3A3;
 }
 
@@ -27,7 +68,7 @@ body > header ul li a i:hover, body > header ul li a .active, body > header ul l
   color: #4671FF;
 }
 
-body > header > #btns-lang button, body main #contact > div, body main #mentions article p, body footer {
+body > header > #btns-lang button, body main #resume aside p a, body main #contact > div, body main #mentions article p, body footer {
   color: #404D7A;
   font-family: "Inter";
 }
@@ -50,9 +91,14 @@ body main #home > article p, body main #projects > div article h3, body main #re
   font-size: 2em;
 }
 
-body main #contact > div #contactForm input, body main #contact > div #contactForm textarea, body main #contact > div #contactForm #btn-submit > button {
+body main #contact > div #contactForm #btn-submit > button, body main #contact > div #feedback, body main #contact > div #feedback button, body main #contact > div #contactForm input, body main #contact > div #contactForm textarea {
   border: #7D7983 2px solid;
   border-radius: 8px;
+}
+
+body main #contact > div #contactForm input, body main #contact > div #contactForm textarea {
+  margin: 0 auto 1em auto;
+  padding: 0.5em;
 }
 
 body > header ul li a, body main #resume > div > div > div > ul > li > a, body main #contact > div {
@@ -113,7 +159,7 @@ body > header, body > header > #btns-lang, body main #home > article > header {
     font-size: 1.5em;
   }
   body header > div button, body main #projects > div article h3, body main #resume div div p, body main #resume div div div span {
-    font-size: 1255em;
+    font-size: 1.25em;
   }
   body main #home p, body main #projects > div article span {
     font-size: 1em;
@@ -149,26 +195,13 @@ body > header, body > header > #btns-lang, body main #home > article > header {
 }
 body {
   min-height: 100vh;
-  margin: 0 auto;
-}
-body > header {
-  margin: 0 auto;
-  width: 70%;
-  justify-content: space-between;
 }
 body > header ul {
   margin-top: 1em;
 }
-body > header ul li {
-  margin-right: 2.5em;
-}
-body > header ul li a {
-  text-decoration: none;
-}
 body > header ul li a i {
   color: #FCD1FC;
   font-size: 3.5em;
-  cursor: pointer;
   transition: transform 300ms;
 }
 body > header ul li a i:hover {
@@ -186,44 +219,27 @@ body > header > #btns-lang {
   margin-right: 3em;
 }
 body > header > #btns-lang button {
-  font-size: 1.25em;
   border: none;
-  cursor: pointer;
-}
-body main {
-  margin: 0 auto;
-  width: 70%;
 }
 body main #home {
   margin: 12em auto 0 auto;
-  width: 90%;
 }
 body main #home > article > header {
   margin-bottom: 3em;
 }
 body main #home > article > header > img {
-  margin: 0 auto;
   width: 15em;
   height: 15em;
   border-radius: 50%;
 }
-body main #home > article p {
-  text-align: center;
-}
 body main #projects > div {
   margin: 1em 0;
-  justify-content: space-between;
 }
 body main #projects > div article {
   padding: 0.5em;
   border: solid 2px #7D7983;
   border-radius: 5px;
-  text-align: center;
   width: 16em;
-}
-body main #projects > div article div {
-  margin: 0 auto;
-  text-align: center;
 }
 body main #projects > div article div img {
   -o-object-fit: cover;
@@ -233,7 +249,6 @@ body main #projects > div article div img {
 }
 body main #projects > div article h3 {
   font-size: 1.2em;
-  text-align: center;
 }
 body main #projects > div article span {
   font-size: 1em;
@@ -247,28 +262,14 @@ body main #resume > div > div {
 body main #resume > div > div p {
   margin: 1em 0 0 0;
 }
-body main #resume > div > div > div {
-  margin-top: 2em;
-}
-body main #resume > div > div > div > ul {
-  margin-top: 2em;
-}
-body main #resume > div > div > div > ul > li {
-  margin-right: 2.5em;
-}
-body main #resume > div > div > div > ul > li > a {
-  text-decoration: none;
-}
 body main #resume > div > div > div > ul > li > a > i {
   color: black;
   font-size: 4em;
-  cursor: pointer;
   transition: transform 300ms;
 }
 body main #resume > div > div > div > ul > li > a > span {
   color: black;
   font-family: "PragNarrow";
-  font-size: 1.25em;
   transition: 500ms;
   opacity: 0;
 }
@@ -286,13 +287,7 @@ body main #resume aside img {
   width: 30.5em;
 }
 body main #resume aside p a {
-  text-decoration: none;
-  color: #404D7A;
-  font-family: "Inter";
   cursor: default;
-}
-body main #resume aside p a i {
-  cursor: pointer;
 }
 body main #resume aside p a > i:hover {
   animation: yippie 800ms infinite;
@@ -302,19 +297,10 @@ body main #contact > div {
 }
 body main #contact > div #contactForm {
   width: 40%;
-  margin: 0 auto;
   padding: 4em 0;
 }
 body main #contact > div #contactForm label {
   margin-bottom: 0.5em;
-}
-body main #contact > div #contactForm input {
-  margin: 0 auto 1em auto;
-  padding: 0.5em;
-}
-body main #contact > div #contactForm textarea {
-  margin: 0 auto 1em auto;
-  padding: 0.5em;
 }
 body main #contact > div #contactForm #btn-submit {
   justify-content: center;
@@ -323,11 +309,21 @@ body main #contact > div #contactForm #btn-submit > button {
   margin: 0.5em 0;
   padding: 0.25em;
 }
+body main #contact > div #feedback {
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  top: 60%;
+  display: block;
+}
+body main #contact > div #feedback button {
+  margin: 0.5em 0;
+  padding: 0.25em 0.5em;
+}
 body main #mentions h2 {
   margin: 0 0 0.8em 0;
 }
 body main #mentions article {
-  width: 90%;
   margin: 0.5em auto;
 }
 body main #mentions article h3 {
@@ -342,7 +338,6 @@ body footer {
   bottom: 0;
   position: fixed;
   width: 100%;
-  text-align: center;
 }
 
 @media screen and (max-width: 1560px) {
@@ -491,8 +486,6 @@ body footer {
     width: 16em;
   }
   body main #projects > div article div img {
-    -o-object-fit: cover;
-       object-fit: cover;
     width: 14em;
     height: 14em;
   }

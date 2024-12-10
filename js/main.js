@@ -16,6 +16,11 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const EmailError = document.getElementById('emailError');
     const EmptyError = document.getElementById('emptyError');
     const Feedback = document.getElementById('feedback');
+    const Checking = document.getElementById('checking');
+
+    const Confirmed = document.getElementById('confirmed');
+    const BtnYes = document.getElementById('btn-yes');
+    const BtnCancel = document.getElementById('btn-cancel');
 
     const Name = document.getElementById('lastname').value.trim();
     const FirstName = document.getElementById('firstname').value.trim();
@@ -62,7 +67,15 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     }
 
     if (isValid) { // Si tous les champs sont valides
-        promptHTML(Feedback, "valid", `Votre message a bien été envoyé !`);
-        document.getElementById('contactForm').reset(); // Réinitialiser le formulaire
+         if(Checking.click){ // Si le bouton "Envoyer" est cliqué
+            Feedback.style.display = 'block'; // Le message suivant s'affiche
+            if (BtnYes.click) { // Si "Oui" alors
+                Feedback.style.display = 'none'; // La demande devient invisible et le message de confirmation apparait
+                promptHTML(Confirmed, "valid", `Votre message a bien été envoyé !`);
+                document.getElementById('contactForm').reset() // Réinitialisation du formualire
+            } else { // Sinon la demande devient invisible
+                Feedback.style.display = 'none';
+            }
+        }
     }
 });
