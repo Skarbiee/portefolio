@@ -136,9 +136,35 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |23|Faire le design du fichier `index.html`|5|Done|
 |24|Faire le design du fichier `includes/form.html`|5|Done|
 |25|Faire le design du fichier `includes/mentions.html`|5|Done|
-|26|Faire le responsive du site|5|To do|
+|26|Faire le responsive du site|5|done|
 |27|Ajouter les animations SCSS|5|Done|
 |**14**|**Utilisation de Bootstrap pour le responsive (row et col)**|**3**|**Done**|
 
 - J'ai partiellement fait le responsive du site, il ne manque plus que la parce `includes/form.html` et `includes/mentions.html.`
 - J'ai corrigé le js, étant donnée que j'ai trouvé comment faire pour que le formulaire ne fasse pas bouger le footer.
+
+### Mardi 10 décembre 2024:
+- J'ai ajouté une modale dans le formulaire au vu des choses imposées par les consignes. J'ai donc, modifié le html, le scss, le js et j'ai fait une update sur le pseudo-code. Je peux maintenant passer au Sprint 6.
+
+### Sprint 6:
+|ID|Name|Sprint|Status|
+|--|----|------|------|
+|28|Vérifier le responsive sur toutes les pages|6|To do|
+|29|Ajouter une fonction pour la navigation entre chaque pages|6|To do|
+|21|Utiliser Vue.js pour les futures animations avec SCSS|4|To do|
+|30|Faire le README.md|6|To do|
+|31|Ajouter l'accessibilité du site avec les Aria-label|6|To do|
+|32|Mimiser les fichiers scss|6|To do|
+|32|Ajouter les tâches qui ont posé problème dans les sprints précédents|6|To do|
+|X|Vérifier les commentaires dans les codes|6|To do|
+
+#### Ce que j'envisage de faire plus tard:
+- Dans la section #projects:
+  - Masquer la description des projets.
+  - On MouseOver sur l'image du projet:
+    - Chhanger l'image du projet
+    - Afficher la description du projet
+    - Masquer les languages utilisées
+
+- Dans tout le site:
+  - Finir d'ajouter les aria-label pour l'accessibilité du site.
