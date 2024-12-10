@@ -138,3 +138,5 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |26|Faire le responsive du site|5|To do|
 |27|Ajouter les animations SCSS|5|Done|
 |**14**|**Utilisation de Bootstrap pour le responsive (row et col)**|**3**|**Done**|
+
+- J'ai partiellement fait le responsive du site, il ne manque plus que la parce `includes/form.html` et `includes/mentions.html.`
