@@ -146,7 +146,7 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 ### Mardi 10 décembre 2024:
 - J'ai ajouté une modale dans le formulaire au vu des choses imposées par les consignes. J'ai donc, modifié le html, le scss, le js et j'ai fait une update sur le pseudo-code. Je peux maintenant passer au Sprint 6.
 
-### Sprint 6:
+## Sprint 6:
 |ID|Name|Sprint|Status|
 |--|----|------|------|
 |28|Vérifier le responsive sur toutes les pages|6|To do|
@@ -155,10 +155,21 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |30|Faire le README.md|6|To do|
 |31|Ajouter l'accessibilité du site avec les Aria-label|6|To do|
 |32|Mimiser les fichiers scss|6|To do|
-|32|Ajouter les tâches qui ont posé problème dans les sprints précédents|6|To do|
 |X|Vérifier les commentaires dans les codes|6|To do|
 
-#### Ce que j'envisage de faire plus tard:
+- Je viens de faire l'accessibilité du formulaire avec les attributs aria.
+
+|ID|Name|Sprint|Status|
+|--|----|------|------|
+|28|Vérifier le responsive sur toutes les pages|6|To do|
+|29|Ajouter une fonction pour la navigation entre chaque pages|6|To do|
+|21|Utiliser Vue.js pour les futures animations avec SCSS|4|To do|
+|30|Faire le README.md|6|To do|
+|31|Ajouter l'accessibilité du site avec les Aria-label|6|Done|
+|32|Mimiser les fichiers scss|6|To do|
+|X|Vérifier les commentaires dans les codes|6|To do|
+
+## Ce que j'envisage de faire plus tard:
 - Dans la section #projects:
   - Masquer la description des projets.
   - On MouseOver sur l'image du projet:
