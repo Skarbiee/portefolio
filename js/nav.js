@@ -30,8 +30,11 @@ function navDynamic() {
                 $('#home').show();
             // Je mets mon message en alerte pour l'instant
         }
+        
     }
+
     window.addEventListener('hashchange', nav);
     window.addEventListener('DOMContentLoaded', nav);
+
 }
 navDynamic();

@@ -49,14 +49,25 @@ body {
             }
         }
         >#btns-lang {
+            @include m.form-prompt(map.get(c.$project, 'light'), #c7a5c7);
+            margin-bottom: 1em;
             margin-right: 3em;
             @extend %flex-itemCenter;
+            @extend %size1_25;
             button {
-                @extend %size1_25;
+                // @extend %size1_25;
                 @extend %default-text;
-                @extend %backgroundcolor;
+                background-color: map.get(c.$project, 'light');
                 border: none;
                 @extend %clicky;
+                &:hover{
+                    color: #b467b4;
+                }
+            }
+
+            span{
+                @extend %size1_25;
+                @extend %default-text;
             }
         }
     }
@@ -215,6 +226,7 @@ body {
 
                         i {
                             @extend %clicky;
+                            rotate: -90deg;
                         }
 
                         >i:hover {
@@ -392,6 +404,9 @@ body {
     body {
         >header {
             @extend %w90100-1150;
+            #btns-lang{
+                margin-bottom: 1.5em;
+            }
         }
         main {
             @extend %w90100-1150;
