@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/frameworks/fontawesome.min.css">
     <!-- <link rel="stylesheet" href="../css/zoning.css"> -->
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/frameworks/jquery.min.js"></script>
     <title>Eva Garrigues</title>
 </head>
 
@@ -17,31 +18,31 @@
         <nav>
             <ul>
                 <li>
-                    <a href="../index.html#home">
+                    <a href="../index.html#home" class="links-nav home">
                         <i class="fa-solid fa-house" role="button" aria-label="allers vers la page d'accueil">&#8205;</i>
                         <span class="name-icon">HOME</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html#projects">
+                    <a href="../index.html#projects" class="links-nav projects">
                         <i class="fa-solid fa-desktop" role="button" aria-label="allers vers la page ddes projets">&#8205;</i>
                         <span class="name-icon">PROJECTS</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../index.html#resume">
+                    <a href="../index.html#resume" class="links-nav resume">
                         <i class="fa-solid fa-file-lines" role="button" aria-label="aller vers la page de CV">&#8205;</i>
                         <span class="name-icon">RESUME</span>
                     </a>
                 </li>
                 <li>
-                    <a href="form.html">
+                    <a href="form.html" class="links-nav contact">
                         <i class="fa-solid fa-inbox active" role="button" aria-label="aller vers la page de contact">&#8205;</i>
                         <span class="name-icon">CONTACT</span>
                     </a>
                 </li>
                 <li>
-                    <a href="mentions.html">
+                    <a href="mentions.html" class="links-nav mentions">
                         <i class="fa-solid fa-scale-balanced" role="button" aria-label="aller vers la page des mentions légales" >&#8205;</i>
                         <span class="name-icon">MENTIONS</span>
                     </a>
@@ -53,7 +54,7 @@
         </div>
     </header>
     <main>
-        <section id="contact" class="marge-all">
+        <article id="contact" class="marge-all">
             <h2 aria-label="Besoin de me contacter ?">Besoin de me contacter ?</h2>
             <div>
                 <span>champs obligatoires *</span>
@@ -92,12 +93,13 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </article>
     </main>
     <footer>
         <span aria-label="copyright 2024 Eva Garrigues">&copy; Copyright 2024 Eva Garrigues</span>
     </footer>
-    <script src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/nav.js"></script>
 </body>
 
 </html>
