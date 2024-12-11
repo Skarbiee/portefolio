@@ -21,19 +21,22 @@
                     <li>
                         <a href="#home" class="links-nav home">
                             <i class="fa-solid fa-house">&#8205;</i>
-                            <span class="name-icon">HOME</span>
+                            <span v-if="french" class="name-icon">ACCUEIL</span>
+                            <span v-else class="name-icon">HOME</span>
                         </a>
                     </li>
                     <li>
                         <a href="#projects" class="links-nav projects">
                             <i class="fa-solid fa-desktop">&#8205;</i>
-                            <span class="name-icon">PROJECTS</span>
+                            <span v-if="french" class="name-icon">PROJETS</span>
+                            <span v-else class="name-icon">PROJECTS</span>
                         </a>
                     </li>
                     <li>
                         <a href="#resume" class="links-nav resume">
                             <i class="fa-solid fa-file-lines">&#8205;</i>
-                            <span class="name-icon">RESUME</span>
+                            <span v-if="french" class="name-icon">CV</span>
+                            <span v-else class="name-icon">RESUME</span>
                         </a>
                     </li>
                     <li>
@@ -45,7 +48,8 @@
                     <li>
                         <a href="includes/mentions.html" class="links-nav mentions">
                             <i class="fa-solid fa-scale-balanced">&#8205;</i>
-                            <span class="name-icon">MENTIONS</span>
+                            <span v-if="french" class="name-icon">MENTIONS</span>
+                            <span v-else class="name-icon">TERMS</span>
                         </a>
                     </li>
                 </ul>
