@@ -165,13 +165,14 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |--|----|------|------|
 |28|Vérifier le responsive sur toutes les pages|6|Done|
 |29|Ajouter une fonction pour la navigation entre chaque pages|6|Done|
-|21|Utiliser Vue.js pour les futures animations avec SCSS|4|To do|
-|30|Faire le README.md|6|To do|
+|21|Utiliser Vue.js pour les futures animations avec SCSS|4|Done|
+|30|Faire le README.md|6|Done|
 |31|Ajouter l'accessibilité du site avec les Aria-label|6|Done|
-|32|Mimiser les fichiers scss|6|To do|
-|X|Vérifier les commentaires dans les codes|6|To do|
+|32|Minimiser les fichiers scss|6|Done|
+|33|Vérifier les commentaires dans les codes|6|To do|
 
 ## Ce que j'envisage de faire plus tard:
+- Finir de commenter le code
 - Dans la section #projects:
   - Masquer la description des projets.
   - On MouseOver sur l'image du projet:
