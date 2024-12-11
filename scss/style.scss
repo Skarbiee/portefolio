@@ -10,58 +10,47 @@ body {
     @extend %backgroundcolor;
     min-height: 100vh;
     @extend %centermarge;
-
     >header {
         @extend %headerCenter;
         @extend %spacebtwnContent;
         @extend %flex-itemCenter;
-
         ul {
             margin-top: 1em;
             @extend %inline-list;
-
             li {
                 @extend %dFlex;
                 @extend %mright2_5;
-
                 a {
                     @extend %centered;
                     @extend %no-deco;
-
                     i {
                         color: map.get(c.$project, 'light');
                         font-size: 3.5em;
                         @extend %clicky;
                         transition: transform 300ms;
-
                         &:hover {
                             @extend %active;
                             transform: translateY(-10px);
                         }
                     }
-
                     .active {
                         @extend %active;
                     }
-
                     span {
                         @extend %active;
                         font-family: t.$icon-font;
                         transition: 500ms;
                         opacity: 0;
                     }
-
                     i:hover+span {
                         opacity: 1;
                     }
                 }
             }
         }
-
         >#btns-lang {
             margin-right: 3em;
             @extend %flex-itemCenter;
-
             button {
                 @extend %size1_25;
                 @extend %default-text;
@@ -71,10 +60,8 @@ body {
             }
         }
     }
-
     main {
         @extend %headerCenter;
-
         #home {
             margin: 12em auto 0 auto;
             @extend %dFlex;
@@ -104,7 +91,6 @@ body {
                 }
             }
         }
-
         #projects {
             h2 {
                 @extend %section-title;
@@ -147,7 +133,6 @@ body {
                 }
             }
         }
-
         #resume {
             h2 {
                 @extend %section-title;
@@ -239,7 +224,6 @@ body {
                 }
             }
         }
-
         #contact {
             h2 {
                 @extend %section-title;
@@ -320,7 +304,6 @@ body {
                 }
             }
         }
-
         #mentions {
             h2 {
                 @extend %section-title;
@@ -344,7 +327,6 @@ body {
             }
         }
     }
-
     footer {
         @extend %backgroundcolor;
         margin-top: auto;
@@ -411,10 +393,8 @@ body {
         >header {
             @extend %w90100-1150;
         }
-
         main {
             @extend %w90100-1150;
-
             #home {
                 margin-top: 1em;
 
@@ -430,7 +410,6 @@ body {
                     }
                 }
             }
-
             #projects {
                 >div {
                     flex-direction: column;
@@ -470,7 +449,6 @@ body {
     body {
         main {
             width: 90%;
-
             #resume {
                 div {
                     flex-direction: column;
@@ -541,28 +519,31 @@ body {
                     }
                 }
             }
-
-            >div {
-                margin: 0.5em 0.5em 0.5em 0;
-
+            >#btns-lang {
+                margin: 0.5em 0 4em 0;
                 button {
                     @extend %size1_25-820;
                 }
             }
         }
-
         main {
-            #home {
-                p {
-                    @extend %size1-820;
+            #home{
+                article{
+                    header{
+                        h2{
+                            @extend %size2_75-820;
+                        }
+                    }
+                    p{
+                        font-size: 1.25em;
+                    }
                 }
             }
-
-            h2 {
-                font-size: 2.75em;
-            }
-
             #projects {
+                h2 {
+                    @extend %size2_75-820;
+                }
+
                 >div {
                     article {
                         width: 20em;
@@ -587,38 +568,33 @@ body {
                     }
                 }
             }
-
             #resume {
+                h2 {
+                    @extend %size2_75-820;
+                }
                 div {
                     flex-direction: column;
-
                     div {
                         @extend %w100-820;
                         text-align: center;
-
                         p {
-                            @extend %size1_25-820;
+                            font-size: 1.25em;
                         }
-
                         div {
                             span {
                                 @extend %size1_25-820;
                             }
-
                             ul {
                                 justify-content: center;
                             }
                         }
                     }
-
                     aside {
                         img {
                             width: 30em;
                         }
-
                         p {
                             @extend %size1_5-820;
-
                             a {
                                 i {
                                     rotate: 90deg;
@@ -628,26 +604,28 @@ body {
                     }
                 }
             }
-
             #contact {
+                h2 {
+                    @extend %size2_75-820;
+                }
                 >div {
                     #contactForm {
                         width: 60%;
                     }
                 }
             }
-
             #mentions {
+                h2 {
+                    @extend %size2_75-820;
+                }
                 article {
                     @extend %w100-820;
-
                     h3 {
                         font-size: 2em;
                         margin-bottom: 0.1em;
                     }
-
                     p {
-                        @extend %size1_5-820;
+                        font-size: 1.25em;
                     }
                 }
             }
@@ -686,7 +664,6 @@ body {
                 }
             }
         }
-
         main {
             #home {
                 article {
@@ -696,18 +673,15 @@ body {
                                 @extend %size2-600;
                             }
                         }
-
                         img {
                             @include m.image-size(10em);
                         }
                     }
-
                     p {
                         @extend %size1_25-600;
                     }
                 }
             }
-
             #projects {
                 h2 {
                     @extend %size2-600;
@@ -726,7 +700,6 @@ body {
                     }
                 }
             }
-
             #resume {
                 h2 {
                     @extend %size2-600;
@@ -771,35 +744,28 @@ body {
                     }
                 }
             }
-
             #contact {
                 h2 {
                     @extend %size2-600;
-                    width: 10em;
                 }
-
                 >div {
                     #contactForm {
                         width: 90%;
                     }
                 }
             }
-
             #mentions {
                 h2 {
                     @extend %size2-600;
                 }
-
                 article {
                     @extend %w100-600;
-
                     h3 {
-                        @extend %size1_25-600;
+                        font-size: 1.25em;
                         margin-bottom: 0.1em;
                     }
-
                     p {
-                        @extend %size1-600;
+                        font-size: 1em;
                     }
                 }
             }

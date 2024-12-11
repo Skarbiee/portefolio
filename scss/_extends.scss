@@ -154,6 +154,10 @@
 }
 // Extends pour les medias queries de largeur max 820px
 @media screen and (max-width: 820px) {
+    %size2_75-820{
+        font-size: 2.75em;
+    }
+    
     %size1_5-820{
         font-size: 1.5em;
     }
@@ -170,17 +174,22 @@
 // Extends pour les medias queries de largeur max 600px
 @media screen and (max-width: 600px) {
     %size2-600{
+        text-align: center;
         font-size: 2em;
     }
+
     %size1_5-600{
         font-size: 1.5em;
     }
+
     %size1_25-600{
         font-size: 1.25em;
     }
+
     %size1-600{
         font-size: 1em;
     }
+
     %w100-600{
         width: 100%;
     }
