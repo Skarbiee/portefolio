@@ -158,11 +158,13 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 |X|Vérifier les commentaires dans les codes|6|To do|
 
 - Je viens de faire l'accessibilité du formulaire avec les attributs aria.
+- J'ai repassé en revu le responsive du site complet. J'ai effectué quelques corrections.
+- J'ai egalement effectué la fonction de navigation entre chaque pages.
 
 |ID|Name|Sprint|Status|
 |--|----|------|------|
-|28|Vérifier le responsive sur toutes les pages|6|To do|
-|29|Ajouter une fonction pour la navigation entre chaque pages|6|To do|
+|28|Vérifier le responsive sur toutes les pages|6|Done|
+|29|Ajouter une fonction pour la navigation entre chaque pages|6|Done|
 |21|Utiliser Vue.js pour les futures animations avec SCSS|4|To do|
 |30|Faire le README.md|6|To do|
 |31|Ajouter l'accessibilité du site avec les Aria-label|6|Done|
