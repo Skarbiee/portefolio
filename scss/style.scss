@@ -1,0 +1,789 @@
+@use "sass:map";
+@use "_variables" as v;
+@use "_colors" as c;
+@use "_typo" as t;
+@use "_mixins" as m;
+@use "_extends";
+@use "_keyframes" as kf;
+
+body {
+    @extend %backgroundcolor;
+    min-height: 100vh;
+    @extend %centermarge;
+    >header {
+        @extend %headerCenter;
+        @extend %spacebtwnContent;
+        @extend %flex-itemCenter;
+        ul {
+            margin-top: 1em;
+            @extend %inline-list;
+            li {
+                @extend %dFlex;
+                @extend %mright2_5;
+                a {
+                    @extend %centered;
+                    @extend %no-deco;
+                    i {
+                        color: map.get(c.$project, 'light');
+                        font-size: 3.5em;
+                        @extend %clicky;
+                        transition: transform 300ms;
+                        &:hover {
+                            @extend %active;
+                            transform: translateY(-10px);
+                        }
+                    }
+                    .active {
+                        @extend %active;
+                    }
+                    span {
+                        @extend %active;
+                        font-family: t.$icon-font;
+                        transition: 500ms;
+                        opacity: 0;
+                    }
+                    i:hover+span {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        >#btns-lang {
+            @include m.form-prompt(map.get(c.$project, 'light'), #c7a5c7);
+            margin-bottom: 1em;
+            margin-right: 3em;
+            @extend %flex-itemCenter;
+            @extend %size1_25;
+            button {
+                // @extend %size1_25;
+                @extend %default-text;
+                background-color: map.get(c.$project, 'light');
+                border: none;
+                @extend %clicky;
+                &:hover{
+                    color: #b467b4;
+                }
+            }
+
+            span{
+                @extend %size1_25;
+                @extend %default-text;
+            }
+        }
+    }
+    main {
+        @extend %headerCenter;
+        #home {
+            margin: 12em auto 0 auto;
+            @extend %dFlex;
+            @extend %w90100;
+
+            h2 {
+                @extend %title-main;
+            }
+
+            >article {
+                @extend %dFlexCol;
+
+                >header {
+                    @extend %flex-itemCenter;
+                    margin-bottom: 3em;
+
+                    >img {
+                        @extend %centermarge;
+                        @include m.image-size(15em);
+                        border-radius: 50%;
+                    }
+                }
+
+                p {
+                    @extend %text-center;
+                    @extend %text-main;
+                }
+            }
+        }
+        #projects {
+            h2 {
+                @extend %section-title;
+            }
+
+            >div {
+                margin: 1em 0;
+                @extend %spacebtwnContent;
+
+                article {
+                    padding: 0.5em;
+                    border: solid 2px map.get(c.$project, 'dark');
+                    border-radius: 5px;
+                    @extend %text-center;
+                    width: 16em;
+
+                    div {
+                        @extend %centermarge;
+                        @extend %text-center;
+
+                        img {
+                            object-fit: cover;
+                            @include m.image-size(14em);
+                        }
+                    }
+
+                    h3 {
+                        @extend %text-main;
+                        font-size: 1.2em;
+                        @extend %text-center;
+                    }
+
+                    span {
+                        font-size: 1em;
+                    }
+
+                    p {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        #resume {
+            h2 {
+                @extend %section-title;
+            }
+
+            >div {
+                @extend %responsive-content;
+
+                >div {
+                    width: 50%;
+
+                    p {
+                        @extend %text-main;
+                        margin: 1em 0 0 0;
+                    }
+
+                    >div {
+                        @extend %mtop2;
+
+                        >span {
+                            @extend %text-main;
+                        }
+
+                        >ul {
+                            @extend %mtop2;
+                            @extend %inline-list;
+
+                            >li {
+                                @extend %inline-list;
+                                @extend %mright2_5;
+
+                                >a {
+                                    @extend %centered;
+                                    @extend %no-deco;
+
+                                    >i {
+                                        color: map.get(c.$code, 'text');
+                                        font-size: 4em;
+                                        @extend %clicky;
+                                        transition: transform 300ms;
+                                    }
+
+                                    >span {
+                                        color: map.get(c.$code, 'text');
+                                        font-family: t.$icon-font;
+                                        @extend %size1_25;
+                                        transition: 500ms;
+                                        opacity: 0;
+                                    }
+
+                                    >i:hover {
+                                        transform: translateY(-15px);
+                                    }
+
+                                    >i:hover+span {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            aside {
+                margin-left: 1em;
+                width: 45%;
+
+                img {
+                    width: 30.5em;
+                }
+
+                p {
+                    @extend %text-main;
+
+                    a {
+                        @extend %no-deco;
+                        @extend %default-text;
+                        cursor: default;
+
+                        i {
+                            @extend %clicky;
+                            rotate: -90deg;
+                        }
+
+                        >i:hover {
+                            animation: yippie 800ms infinite;
+                        }
+                    }
+                }
+            }
+        }
+        #contact {
+            h2 {
+                @extend %section-title;
+            }
+
+            >div {
+                @extend %centered;
+                padding: 1em 0 0 0;
+                @extend %default-text;
+
+                #contactForm {
+                    width: 40%;
+                    @extend %centermarge;
+                    padding: 4em 0;
+
+                    label {
+                        margin-bottom: 0.5em;
+                    }
+
+                    input {
+                        @extend %inputs;
+                    }
+
+                    textarea {
+                        @extend %inputs;
+                    }
+
+                    #btn-submit {
+                        justify-content: center;
+
+                        >button {
+                            margin: 0.5em 0;
+                            padding: 0.25em;
+                            @extend %border-form;
+                        }
+                    }
+
+                    .error {
+                        @include m.form-prompt(map.get(c.$project, 'light'), #c7a5c7);
+                    }
+                }
+
+                .valid {
+                    @include m.form-prompt(#d1fcd3, #adc7a5);
+                }
+
+                #feedback {
+                    position: fixed;
+                    top: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.877);
+                    display: none;
+
+                    div {
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        padding: 1em;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+
+                        background-color: map.get(c.$project, 'light');
+                        border: #c7a5c7 0.1em solid;
+                        color: map.get(c.$project, 'text');
+
+
+                        button {
+                            margin: 0.5em 1em;
+                            padding: 0.25em 0.5em;
+                            @extend %border-form;
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+        #mentions {
+            h2 {
+                @extend %section-title;
+                margin: 0 0 0.8em 0;
+            }
+
+            article {
+                @extend %w90100;
+                margin: 0.5em auto;
+
+                h3 {
+                    @extend %text-main;
+                    margin-bottom: 0.1em;
+                }
+
+                p {
+                    text-align: justify;
+                    @extend %default-text;
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+    footer {
+        @extend %backgroundcolor;
+        margin-top: auto;
+        bottom: 0;
+        position: fixed;
+        @extend %default-text;
+        width: 100%;
+        @extend %text-center;
+    }
+}
+
+// Medias queries de largeur max 1560px
+@media screen and (max-width: 1560px) {
+    body {
+        main {
+            #resume {
+                div {
+                    align-items: center;
+
+                    div {
+                        p {
+                            @extend %size1_75-1560;
+                        }
+
+                        div {
+                            span {
+                                @extend %size1_75-1560;
+                            }
+
+                            ul {
+                                li {
+                                    a {
+                                        i {
+                                            font-size: 3em;
+                                        }
+
+                                        span {
+                                            font-size: 1.25em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    aside {
+                        img {
+                            width: 25em;
+                        }
+
+                        p {
+                            @extend %size1_75-1560;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medias queries de largeur max 1150px
+@media screen and (max-width: 1150px) {
+    body {
+        >header {
+            @extend %w90100-1150;
+            #btns-lang{
+                margin-bottom: 1.5em;
+            }
+        }
+        main {
+            @extend %w90100-1150;
+            #home {
+                margin-top: 1em;
+
+                header {
+                    @extend %itemCenter-1150;
+                    text-align: center;
+                    flex-direction: column-reverse;
+                    @extend %w100-1150;
+
+                    div {
+                        margin-top: 2em;
+                        @extend %w100-1150;
+                    }
+                }
+            }
+            #projects {
+                >div {
+                    flex-direction: column;
+                    @extend %itemCenter-1150;
+
+                    article {
+                        padding: 1em 0;
+                        margin-bottom: 1em;
+                        width: 30em;
+
+                        div {
+                            img {
+                                @include m.image-size(28em);
+                            }
+                        }
+
+                        h3 {
+                            font-size: 1.5em;
+                        }
+
+                        span {
+                            font-size: 1.25em;
+                        }
+
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medias queries de largeur max 1000px
+@media screen and (max-width: 1000px) {
+    body {
+        main {
+            width: 90%;
+            #resume {
+                div {
+                    flex-direction: column;
+
+                    div {
+                        width: 100%;
+                        text-align: center;
+
+                        p {
+                            @extend %size1_5-1000;
+                        }
+
+                        div {
+                            span {
+                                @extend %size1_5-1000;
+                            }
+
+                            ul {
+                                justify-content: center;
+                            }
+                        }
+                    }
+
+                    aside {
+                        width: 100%;
+                        @extend %flex-itemCenter-1000;
+                        @extend %reverse-textCenter-1000;
+
+                        img {
+                            width: 40em;
+                            margin-bottom: 2em;
+                        }
+
+                        p {
+                            @extend %size1_5-1000;
+
+                            a {
+                                i {
+                                    rotate: 90deg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medias queries de largeur max 820px
+@media screen and (max-width:820px) {
+    body {
+        header {
+            flex-direction: column;
+
+            ul {
+                li {
+                    margin-right: 0.5em;
+
+                    a {
+                        i {
+                            font-size: 2.3em;
+                        }
+
+                        span {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+            >#btns-lang {
+                margin: 0.5em 0 4em 0;
+                button {
+                    @extend %size1_25-820;
+                }
+            }
+        }
+        main {
+            #home{
+                article{
+                    header{
+                        h2{
+                            @extend %size2_75-820;
+                        }
+                    }
+                    p{
+                        font-size: 1.25em;
+                    }
+                }
+            }
+            #projects {
+                h2 {
+                    @extend %size2_75-820;
+                }
+
+                >div {
+                    article {
+                        width: 20em;
+
+                        div {
+                            img {
+                                @include m.image-size(18em);
+                            }
+                        }
+
+                        h3 {
+                            @extend %size1_25-820;
+                        }
+
+                        span {
+                            @extend %size1-820;
+                        }
+
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+            #resume {
+                h2 {
+                    @extend %size2_75-820;
+                }
+                div {
+                    flex-direction: column;
+                    div {
+                        @extend %w100-820;
+                        text-align: center;
+                        p {
+                            font-size: 1.25em;
+                        }
+                        div {
+                            span {
+                                @extend %size1_25-820;
+                            }
+                            ul {
+                                justify-content: center;
+                            }
+                        }
+                    }
+                    aside {
+                        img {
+                            width: 30em;
+                        }
+                        p {
+                            @extend %size1_5-820;
+                            a {
+                                i {
+                                    rotate: 90deg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #contact {
+                h2 {
+                    @extend %size2_75-820;
+                }
+                >div {
+                    #contactForm {
+                        width: 60%;
+                    }
+                }
+            }
+            #mentions {
+                h2 {
+                    @extend %size2_75-820;
+                }
+                article {
+                    @extend %w100-820;
+                    h3 {
+                        font-size: 2em;
+                        margin-bottom: 0.1em;
+                    }
+                    p {
+                        font-size: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Medias queries de largeur max 600px
+@media screen and (max-width: 600px) {
+    body {
+        header {
+            @extend %w100-600;
+            margin: 0;
+
+            ul {
+                margin-right: 1.2em;
+
+                li {
+                    margin-right: 0.5em;
+
+                    a {
+                        i {
+                            @extend %size2-600;
+                        }
+
+                        span {
+                            font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+
+            >div {
+                button {
+                    @extend %size1-600;
+                }
+            }
+        }
+        main {
+            #home {
+                article {
+                    header {
+                        div {
+                            h2 {
+                                @extend %size2-600;
+                            }
+                        }
+                        img {
+                            @include m.image-size(10em);
+                        }
+                    }
+                    p {
+                        @extend %size1_25-600;
+                    }
+                }
+            }
+            #projects {
+                h2 {
+                    @extend %size2-600;
+                }
+
+                >div {
+                    article {
+                        margin-bottom: 1em;
+                        width: 16em;
+
+                        div {
+                            img {
+                                @include m.image-size(14em);
+                            }
+                        }
+                    }
+                }
+            }
+            #resume {
+                h2 {
+                    @extend %size2-600;
+                }
+
+                div {
+                    flex-direction: column;
+
+                    div {
+                        @extend %w100-600;
+                        text-align: center;
+
+                        p {
+                            @extend %size1-600;
+                        }
+
+                        div {
+                            span {
+                                @extend %size1-600;
+                            }
+                        }
+                    }
+
+                    aside {
+                        img {
+                            display: none;
+                        }
+
+                        p {
+                            @extend %size1-600;
+                            padding-bottom: 2em;
+
+                            a {
+                                font-weight: bold;
+                                cursor: pointer;
+
+                                i {
+                                    rotate: 180deg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #contact {
+                h2 {
+                    @extend %size2-600;
+                }
+                >div {
+                    #contactForm {
+                        width: 90%;
+                    }
+                }
+            }
+            #mentions {
+                h2 {
+                    @extend %size2-600;
+                }
+                article {
+                    @extend %w100-600;
+                    h3 {
+                        font-size: 1.25em;
+                        margin-bottom: 0.1em;
+                    }
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

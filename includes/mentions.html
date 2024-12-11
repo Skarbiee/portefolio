@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+    <link rel="stylesheet" href="../css/frameworks/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/frameworks/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="../css/zoning.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/frameworks/jquery.min.js"></script>
+    <script src="js/frameworks/vue.global.prod.js"></script>
+    <title>Eva Garrigues</title>
+</head>
+
+<body id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html#home" class="links-nav home">
+                            <i class="fa-solid fa-house">&#8205;</i>
+                            <span class="name-icon">HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#projects" class="links-nav projects">
+                            <i class="fa-solid fa-desktop">&#8205;</i>
+                            <span class="name-icon">PROJECTS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#resume" class="links-nav resume">
+                            <i class="fa-solid fa-file-lines">&#8205;</i>
+                            <span class="name-icon">RESUME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="form.html" class="links-nav contact">
+                            <i class="fa-solid fa-inbox">&#8205;</i>
+                            <span class="name-icon">CONTACT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mentions.html" class="links-nav mentions">
+                            <i class="fa-solid fa-scale-balanced">&#8205;</i>
+                            <span class="name-icon">MENTIONS</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <div id="btns-lang">
+                <button type="button" @click="french = true">FR</button>
+                <span> | </span>
+                <button type="button" @click="french = false">EN</button>
+            </div> -->
+        </header>
+    <main>
+        <div id="mentions">
+            <h2 v-if="french">Mentions Légales</h2>
+            <!-- <h2 v-else>Terms of use</h2> -->
+            <article>
+                <h3 v-if="french"><strong>Editeur de cette section</strong></h3>
+                <!-- <h3 v-else><strong>Editor of this section</strong></h3> -->
+                <p>Eva Garrigues</p>
+            </article>
+            <article>
+                <h3 v-if="french"><strong>Propriété intellectuelle</strong></h3>
+                <!-- <h3 v-else><strong>Intellectual property rights</strong></h3> -->
+                <p v-if="french">Tous les contenus de ce site (textes, images, vidéos, code) sont protégés par le droit d'auteur.
+                    Toute reproduction ou utilisation sans autorisation préalable est interdite.</p>
+                <!-- <p v-else>All content on this site (text, images, videos, code) is protected by copyright.
+                    Any reproduction or use without prior authorization is prohibited.</p> -->
+            </article>
+            <article>
+                <h3 v-if="french"><strong>Données personnelles</strong></h3>
+                <!-- <h3 v-else><strong>Personal information</strong></h3> -->
+                <p v-if="french">Ce site ne collecte, ne stocke, si ne transmet aucune donnée personnelle. Les informations saisies
+                    dans le formulaire de contact ne sont pas enregistrées et servent uniquement à afficher un message
+                    de confirmation ou d'erreur.</p>
+                    <!-- <p v-else>This site does not collect, store or transmit any personal data. Information entered in the contact form is not saved and is only used to display a confirmation or error message.</p> -->
+            </article>
+            <article>
+                <h3 v-if="french"><strong>Remerciement</strong></h3>
+                <!-- <h3 v-else><strong>Thank you</strong></h3> -->
+                <p v-if="french">Je remercie mon formateur David Dlhoumaud et les stagiaires de mon groupe.</p>
+                <!-- <p v-else>I would like to thank my trainer David Dlhoumaud and the trainees in my group.</p> -->
+            </article>
+        </div>
+    </main>
+    <footer>
+        <span>&copy; Copyright 2024 Eva Garrigues</span>
+    </footer>
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <!-- <script type="text/javascript" src="js/app.js"></script> -->
+</body>
+
+</html>

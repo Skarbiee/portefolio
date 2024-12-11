@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/frameworks/bootstrap.min.css">
+    <link rel="stylesheet" href="css/frameworks/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="css/zoning.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/frameworks/jquery.min.js"></script>
+    <script src="js/frameworks/vue.global.prod.js"></script>
+    <title>Eva Garrigues</title>
+</head>
+
+<body id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#home" class="links-nav home">
+                            <i class="fa-solid fa-house">&#8205;</i>
+                            <span v-if="french" class="name-icon">ACCUEIL</span>
+                            <span v-else class="name-icon">HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="links-nav projects">
+                            <i class="fa-solid fa-desktop">&#8205;</i>
+                            <span v-if="french" class="name-icon">PROJETS</span>
+                            <span v-else class="name-icon">PROJECTS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resume" class="links-nav resume">
+                            <i class="fa-solid fa-file-lines">&#8205;</i>
+                            <span v-if="french" class="name-icon">CV</span>
+                            <span v-else class="name-icon">RESUME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="includes/form.html" class="links-nav contact">
+                            <i class="fa-solid fa-inbox">&#8205;</i>
+                            <span class="name-icon">CONTACT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="includes/mentions.html" class="links-nav mentions">
+                            <i class="fa-solid fa-scale-balanced">&#8205;</i>
+                            <span v-if="french" class="name-icon">MENTIONS</span>
+                            <span v-else class="name-icon">TERMS</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="btns-lang">
+                <button type="button" @click="french = true">FR</button>
+                <span> | </span>
+                <button type="button" @click="french = false">EN</button>
+            </div>
+        </header>
+    <main>
+        <section id="home">
+            <h6>&#8205;</h6>
+            <article class="row ">
+                <header class="col-lg-12 col-md-8">
+                    <div class="col-12 col-lg-7">
+                        <h2 v-if="french">Salut !</h2>
+                        <h2 v-else>Hello !</h2>
+                        <h2 v-if="french"> Moi c'est Eva</h2>
+                        <h2 v-else>I'm Eva</h2>
+                    </div>
+                    <img class="col-12 col-lg-5" src="assets/imgs/skarbie.png" alt="Photo de profil du portefolio">
+                </header>
+                <p v-if="french" class="col-12">Je suis <strong>développeuse full-stack</strong> passionnée par le
+                    back-end et
+                    admirative du front-end, j'aime les interfaces user-friendly.</p>
+                <p v-else class="col-12">I'm a <strong>full-stack developer</strong> passionate about back-end but also
+                    really admirative for front-end, I like to create user-friendly interfaces.</p>
+            </article>
+
+        </section>
+        <section id="projects">
+            <h2 v-if="french">Mes réalisations</h2>
+            <h2 v-else>My projects</h2>
+            <div class="row">
+                <article>
+                    <div>
+                        <img src="assets/imgs/artistesPeintres.png" alt="site web 'Les Artistes Peintres'">
+                    </div>
+                    <h3 v-if="french">"Les Artistes Peintres"</h3>
+                    <h3 v-else>"The Painters"</h3>
+                    <span>HTML / CSS animation / Javascript</span>
+                    <p v-if="french">Site pour une galerie d'art, affichage individuelle des sections des artistes.</p>
+                    <p v-else>Website for an art gallery, individual display of artist sections.</p>
+                </article>
+                <article>
+                    <div>
+                        <img src="assets/imgs/gamesOn.png" alt="site web 'Games On'">
+                    </div>
+                    <h3>"GamesOn"</h3>
+                    <span>HTML / CSS / JavaScript</span>
+                    <p v-if="french">Site multi-outils mais aussi pour jouer au "Juste prix", au "Pendu" etc..</p>
+                    <p v-else>Multi-tool website, but also good for playing 'Guess the price','HangHim' etc...</p>
+                </article>
+                <article>
+                    <div>
+                        <img src="assets/imgs/tvShows.png" alt="site web 'Liste des séries TV'">
+                    </div>
+                    <h3 v-if="french">"Liste des séries TV"</h3>
+                    <h3 v-else>"TV shows list"</h3>
+                    <span>HTML - Bootstrap / CSS /Javascript</span>
+                    <p v-if="french">Affichage d'une liste de séries TV, avec possibilité de liker la série.</p>
+                    <p v-else>Display of a list of TV shows, with the liking option.</p>
+                </article>
+            </div>
+            <div class="row">
+                <article>
+                    <div>
+                        <img src="assets/imgs/historyGames.png" alt="site web 'History Games'">
+                    </div>
+                    <h3>"History Games"</h3>
+                    <span>HTML - Bootstrap / CSS</span>
+                    <p v-if="french">Site à informations pour les jeux vidéos.</p>
+                    <p v-else>Information website for video games.</p>
+                </article>
+                <article>
+                    <div>
+                        <img src="assets/imgs/ShoesPlash.png" alt="site web 'Shoe Splash'">
+                    </div>
+                    <h3>"ShoeSplash"</h3>
+                    <span>HTML / CSS animation</span>
+                    <p v-if="french">Site de boutique de chaussures en ligne.</p>
+                    <p v-else>Online shoe store.</p>
+                </article>
+                <article>
+                    <div>
+                        <img src="assets/imgs/chocoBoom.png" alt="site web 'Choco Boom'">
+                    </div>
+                    <h3>"ChocoBoom"</h3>
+                    <span>HTML / CSS</span>
+                    <p v-if="french">Site type blog cuisine sur le chocolat.</p>
+                    <p v-else>Website blog type for cooking recipes</p>
+                </article>
+            </div>
+        </section>
+        <section id="resume">
+            <h2 v-if="french">A propos de moi</h2>
+            <h2 v-else>About me</h2>
+            <div>
+                <div>
+                    <p v-if="french">Je m'appelle Eva Garrigues, je suis développeuse full-stack. Je me suis formée en
+                        autodidacte
+                        avec CodeAcademy, puis j'ai confirmé mes acquis en formation Développement Web et Web Mobile à
+                        Albi avec l'AFPA.</p>
+                    <p v-else>I'm Eva Garrigues, I'm a full-stack developer. I trained myself with CodeAcademy, then I
+                        confirmed my acquired skills in Web Development and Web Mobile at Albi with AFPA.</p>
+                    <p v-if="french">J'ai toujours été attirée par le monde créatif, balançant l'artistique et le
+                        pratique, gardant
+                        l'ensemble accessible à tous.</p>
+                    <p v-else>I have always been attracted to the creative world, balancing artistic and practical,
+                        keeping everything accessible to everyone.</p>
+                    <div>
+                        <span v-if="french">Voici mes réseaux:</span>
+                        <span v-else>You can find me on:</span>
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/evgarrigues" target="_blank">
+                                    <i class="fa-brands fa-linkedin">&#8205;</i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Skarbiee" target="_blank">
+                                    <i class="fa-brands fa-square-github">&#8205;</i>
+                                    <span>Github</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <aside>
+                    <img src="assets/imgs/CV-Garrigues-Eva.png" alt="Aperçu du CV">
+                    <p v-if="french">Pour mon CV c'est par
+                        <a href="assets/imgs/CV-Garrigues-Eva.pdf">ici
+                            <i class="fa-solid fa-arrow-right-long">&#8205;</i>
+                        </a>
+                    </p>
+                    <p v-else>Find my resume right
+                        <a href="assets/imgs/CV-Garrigues-Eva.pdf">here
+                            <i class="fa-solid fa-arrow-right-long">&#8205;</i>
+                        </a>
+                    </p>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span>&copy; Copyright 2024 Eva Garrigues</span>
+    </footer>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
