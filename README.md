@@ -29,8 +29,52 @@ Ce projet a été réalisé dans le cadre d'un examen d'une formation en Dévelo
 
 ## Structure du projet
 ```
-portefolio/
-
+PORTFOLIO
+├── assets├──imgs/
+│   ├── css
+│   │   ├── frameworks
+│   │   │   ├── normalize.css
+│   │   │   ├── normalize.css.map
+│   │   │   ├── normalize.min.css
+│   │   │   ├── normalize.min.css.map
+│   │   ├── style.css
+│   │   ├── style.css.map
+│   │   ├── style.min.css
+│   │   ├── style.min.css.map
+│   │   ├── zoning.css
+│   │   ├── zoning.css.map
+│   │   ├── zoning.min.css
+│   │   ├── zoning.min.css.map
+├── docs
+│   ├── backlogs.md
+│   ├── journal_de_bord.md
+│   ├── prototypes.pdf
+│   ├── pseudo-code.md
+│   ├── wireframes.pdf
+│   ├── use_ai.md
+├── includes
+│   ├── form.html
+│   ├── mentions.html
+├── js
+│   ├── frameworks
+│   │   ├── jquery.min.js
+│   │   ├── vue.global.prod.js
+│   ├── app.js
+│   ├── main.js
+│   ├── nav.js
+├── scss
+│   ├── _colors.scss
+│   ├── _extends.scss
+│   ├── _keyframes.scss
+│   ├── _mixins.scss
+│   ├── _typo.scss
+│   ├── _variables.scss
+│   ├── normalize.scss
+│   ├── style.scss
+│   ├── zoning.scss
+├── .gitignore
+├── index.html
+├── README.md
 ```
 
 ## Ouverture du projet

@@ -161,6 +161,9 @@ Je peux maintenant créer les userStories  dans le `backlogs.md`.
 - J'ai repassé en revu le responsive du site complet. J'ai effectué quelques corrections.
 - J'ai egalement effectué la fonction de navigation entre chaque pages.
 
+### Mercredi 11 décembre 2024:
+- J'ai mis à jour le README.md et j'ai ajouté le use-ai.md pour l'aide de chatGPT sur la documentation.
+
 |ID|Name|Sprint|Status|
 |--|----|------|------|
 |28|Vérifier le responsive sur toutes les pages|6|Done|
