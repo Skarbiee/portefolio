@@ -26,7 +26,7 @@ body main #home, body main #mentions article {
   width: 90%;
 }
 
-body > header > #btns-lang button, body main #resume > div > div > div > ul > li > a > span {
+body > header > #btns-lang, body > header > #btns-lang span, body main #resume > div > div > div > ul > li > a > span {
   font-size: 1.25em;
 }
 
@@ -51,7 +51,7 @@ body > header ul li a i, body > header > #btns-lang button, body main #resume > 
   cursor: pointer;
 }
 
-body, body > header > #btns-lang button, body footer {
+body, body footer {
   background-color: #B6A3A3;
 }
 
@@ -68,7 +68,7 @@ body > header ul li a i:hover, body > header ul li a .active, body > header ul l
   color: #4671FF;
 }
 
-body > header > #btns-lang button, body main #resume aside p a, body main #contact > div, body main #mentions article p, body footer {
+body > header > #btns-lang button, body > header > #btns-lang span, body main #resume aside p a, body main #contact > div, body main #mentions article p, body footer {
   color: #404D7A;
   font-family: "Inter";
 }
@@ -191,7 +191,7 @@ body > header, body > header > #btns-lang, body main #home > article > header {
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(6px);
   }
   100% {
     transform: translateX(0px);
@@ -220,10 +220,23 @@ body > header ul li a i:hover + span {
   opacity: 1;
 }
 body > header > #btns-lang {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25em 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #FCD1FC;
+  border: #c7a5c7 0.1em solid;
+  border-radius: 8px;
+  color: #404D7A;
+  margin-bottom: 1em;
   margin-right: 3em;
 }
 body > header > #btns-lang button {
+  background-color: #FCD1FC;
   border: none;
+}
+body > header > #btns-lang button:hover {
+  color: #b467b4;
 }
 body main #home {
   margin: 12em auto 0 auto;
@@ -292,6 +305,9 @@ body main #resume aside img {
 }
 body main #resume aside p a {
   cursor: default;
+}
+body main #resume aside p a i {
+  rotate: -90deg;
 }
 body main #resume aside p a > i:hover {
   animation: yippie 800ms infinite;
@@ -392,6 +408,9 @@ body footer {
   }
 }
 @media screen and (max-width: 1150px) {
+  body > header #btns-lang {
+    margin-bottom: 1.5em;
+  }
   body main #home {
     margin-top: 1em;
   }
