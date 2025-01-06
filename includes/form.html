@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="../css/zoning.css"> -->
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/frameworks/jquery.min.js"></script>
-    <script src="../js/frameworks/vue.global.prod.js"></script>
+    <!-- <script src="../js/frameworks/vue.global.prod.js"></script> -->
     <title>Eva Garrigues</title>
 </head>
 
@@ -50,19 +50,19 @@
                 </li>
             </ul>
         </nav>
-        <div id="btns-lang">
+        <!-- <div id="btns-lang">
             <button type="button" @click="french = true">FR</button>
             <span> | </span>
             <button type="button" @click="french = false">EN</button>
-        </div>
+        </div> -->
     </header>
     <main>
         <article id="contact" class="marge-all">
             <h2 v-if="french" aria-label="Besoin de me contacter ?">Besoin de me contacter ?</h2>
-            <h2 v-else aria-label="Want to contact me ?">Want to contact me ?</h2>
+            <!-- <h2 v-else aria-label="Want to contact me ?">Want to contact me ?</h2> -->
             <div>
                 <span v-if="french">champs obligatoires *</span>
-                <span v-else>required fields *</span>
+                <!-- <span v-else>required fields *</span> -->
                 <form v-if="french" id="contactForm" class="container-fluid" aria-label="formulaire de contact">
                     <div class="row">
                         <label class="col-12" for="lastname" aria-label="nom">Nom *</label>
