@@ -203,6 +203,9 @@ body {
 body > header ul {
   margin-top: 1em;
 }
+body > header ul li a {
+  width: 3em;
+}
 body > header ul li a i {
   color: #FCD1FC;
   font-size: 3.5em;
