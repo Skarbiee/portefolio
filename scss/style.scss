@@ -21,6 +21,7 @@ body {
                 @extend %dFlex;
                 @extend %mright2_5;
                 a {
+                    width: 3em;
                     @extend %centered;
                     @extend %no-deco;
                     i {
