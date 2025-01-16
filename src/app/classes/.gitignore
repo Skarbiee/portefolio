@@ -1,0 +1,31 @@
+# Variables d'environnement
+.env
+*.env
+
+# Dépendances
+node_modules/
+vendor/
+
+# Fichiers compilés et de cache
+src/public/css/*.css
+src/public/css/*.css.map
+src/public/js/*.min.js
+src/public/js/*.map
+src/public/scss/.sass-cache/
+
+# Docker
+settings/config/*.log
+settings/config/tmp/
+docker-compose.override.yml
+
+# Fichiers de logs et temporaires
+*.log
+*.tmp
+*.pid
+*.sock
+
+# IDEs et systèmes d'exploitation
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
