@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="../css/zoning.min.css"> -->
     <link rel="stylesheet" href="../css/style.min.css">
     <script src="../js/frameworks/jquery.min.js"></script>
-    <script src="../js/frameworks/vue.global.prod.js"></script>
+    <!-- <script src="../js/frameworks/vue.global.prod.js"></script> -->
 </head>
 
 <body id="app">
@@ -23,19 +23,19 @@
                     <li>
                         <a href="../index.html#home" class="links-nav home">
                             <i class="fa-solid fa-house">&#8205;</i>
-                            <span class="name-icon">HOME</span>
+                            <span class="name-icon">ACCUEIL</span>
                         </a>
                     </li>
                     <li>
                         <a href="../index.html#projects" class="links-nav projects">
                             <i class="fa-solid fa-desktop">&#8205;</i>
-                            <span class="name-icon">PROJECTS</span>
+                            <span class="name-icon">PROJETS</span>
                         </a>
                     </li>
                     <li>
                         <a href="../index.html#resume" class="links-nav resume">
                             <i class="fa-solid fa-file-lines">&#8205;</i>
-                            <span class="name-icon">RESUME</span>
+                            <span class="name-icon">CV</span>
                         </a>
                     </li>
                     <li>
@@ -52,42 +52,42 @@
                     </li>
                 </ul>
             </nav>
-            <div id="btns-lang">
+            <!-- <div id="btns-lang">
                 <button type="button" @click="french = true">FR</button>
                 <span> | </span>
                 <button type="button" @click="french = false">EN</button>
-            </div>
+            </div> -->
         </header>
     <main>
         <div id="mentions">
             <h2 v-if="french">Mentions Légales</h2>
-            <h2 v-else>Terms of use</h2>
+            <!-- <h2 v-else>Terms of use</h2> -->
             <article>
                 <h3 v-if="french"><strong>Editeur de cette section</strong></h3>
-                <h3 v-else><strong>Editor of this section</strong></h3>
+                <!-- <h3 v-else><strong>Editor of this section</strong></h3> -->
                 <p>Eva Garrigues</p>
             </article>
             <article>
                 <h3 v-if="french"><strong>Propriété intellectuelle</strong></h3>
-                <h3 v-else><strong>Intellectual property right</strong></h3>
+                <!-- <h3 v-else><strong>Intellectual property right</strong></h3> -->
                 <p v-if="french">Tous les contenus de ce site (textes, images, vidéos, code) sont protégés par le droit d'auteur.
                     Toute reproduction ou utilisation sans autorisation préalable est interdite.</p>
-                <p v-else>All content on this site (text, images, videos, code) is protected by copyright.
-                    Any reproduction or use without prior authorization is prohibited.</p>
+                <!-- <p v-else>All content on this site (text, images, videos, code) is protected by copyright. -->
+                <!-- Any reproduction or use without prior authorization is prohibited.</p> -->
             </article>
             <article>
                 <h3 v-if="french"><strong>Données personnelles</strong></h3>
-                <h3 v-else><strong>Personal informations</strong></h3>
+                <!-- <h3 v-else><strong>Personal informations</strong></h3> -->
                 <p v-if="french">Ce site ne collecte, ne stocke, si ne transmet aucune donnée personnelle. Les informations saisies
                     dans le formulaire de contact ne sont pas enregistrées et servent uniquement à afficher un message
                     de confirmation ou d'erreur.</p>
-                    <p v-else>This site does not collect, store or transmit any personal data. Information entered in the contact form is not saved and is only used to display a confirmation or error message.</p>
+                <!-- <p v-else>This site does not collect, store or transmit any personal data. Information entered in the contact form is not saved and is only used to display a confirmation or error message.</p> -->
             </article>
             <article>
                 <h3 v-if="french"><strong>Remerciement</strong></h3>
-                <h3 v-else><strong>Thank you</strong></h3>
+                <!-- <h3 v-else><strong>Thank you</strong></h3> -->
                 <p v-if="french">Je remercie mon formateur David Dlhoumaud et les stagiaires de mon groupe.</p>
-                <p v-else>I would like to thank my trainer David Dlhoumaud and the trainees in my group.</p>
+                <!-- <p v-else>I would like to thank my trainer David Dlhoumaud and the trainees in my group.</p> -->
             </article>
         </div>
     </main>
